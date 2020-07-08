@@ -27,13 +27,3 @@
 > define("TOKEN","YourToken");
 > ```
 就可以享受白嫖带来的乐趣了!  
-
-更新记录:
-
-+ 2020.03.27 重写交互方式，且现已支持`PicGo`中的`web-uploader`插件（Zqian）,配置API地址就写up.php的地址，POST参数填写`pic`
-
-  
-
-如果有帮助到你 欢迎赞赏 支付宝 https://www.a2data.cn/medias/reward/alipay.jpg
-
-微信：https://www.a2data.cn/medias/reward/wechat.png
