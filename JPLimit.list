@@ -1,4 +1,11 @@
-# 内容：日本限定 JPLimit.list
+# 内容：日本限定
 DOMAIN-SUFFIX,getchu.com
 DOMAIN-SUFFIX,syosetu.com
 DOMAIN-KEYWORD,syosetu
+DOMAIN,ncode.syosetu.com
+DOMAIN,mypage.syosetu.com
+DOMAIN,xmypage.syosetu.com
+DOMAIN,noc.syosetu.com
+DOMAIN,novel18.syosetu.com
+DOMAIN,mnlt.syosetu.com
+DOMAIN,mid.syosetu.com
