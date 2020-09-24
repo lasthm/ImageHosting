@@ -1,5 +1,7 @@
 # 内容：日本限定
 DOMAIN-SUFFIX,getchu.com
+DOMAIN-SUFFIX,mangabox.me
+# 小说家
 DOMAIN-SUFFIX,syosetu.com
 DOMAIN-KEYWORD,syosetu
 DOMAIN,syosetu.com
