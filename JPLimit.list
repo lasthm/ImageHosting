@@ -1,3 +1,9 @@
+# PCR相关
+PROCESS-NAME,jp.co.cygames.princessconnectredive
+PROCESS-NAME,com.cygames.cycomi
+PROCESS-NAME,jp.naver.linemanga.android
+PROCESS-NAME,DMMGamePlayer.exe
+PROCESS-NAME,PrincessConnectReDive.exe
 # 内容：日本限定
 DOMAIN-SUFFIX,getchu.com
 DOMAIN-SUFFIX,mangabox.me
@@ -12,9 +18,4 @@ DOMAIN,noc.syosetu.com
 DOMAIN,novel18.syosetu.com
 DOMAIN,mnlt.syosetu.com
 DOMAIN,mid.syosetu.com
-# PCR相关
-PROCESS-NAME,jp.co.cygames.princessconnectredive
-PROCESS-NAME,com.cygames.cycomi
-PROCESS-NAME,jp.naver.linemanga.android
-PROCESS-NAME,DMMGamePlayer.exe
-PROCESS-NAME,PrincessConnectReDive.exe
+
