@@ -1,0 +1,12 @@
+# PCR相关
+DOMAIN-SUFFIX,cygames.jp
+DOMAIN-KEYWORD,priconne-redive
+PROCESS-NAME,jp.co.cygames.princessconnectredive
+PROCESS-NAME,com.cygames.cycomi
+PROCESS-NAME,jp.naver.linemanga.android
+PROCESS-NAME,DMMGamePlayer.exe
+PROCESS-NAME,PrincessConnectReDive.exe
+IP-CIDR,13.67.186.0/24,no-resolve
+IP-CIDR,23.196.225.0/24,no-resolve
+IP-CIDR,23.50.16.0/24,no-resolve
+IP-CIDR,23.56.112.0/24,no-resolve
