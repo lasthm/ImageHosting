@@ -3,7 +3,6 @@ DOMAIN-SUFFIX,cygames.jp
 DOMAIN-KEYWORD,priconne-redive
 PROCESS-NAME,jp.co.cygames.princessconnectredive
 PROCESS-NAME,com.cygames.cycomi
-PROCESS-NAME,jp.naver.linemanga.android
 PROCESS-NAME,DMMGamePlayer.exe
 PROCESS-NAME,PrincessConnectReDive.exe
 IP-CIDR,13.67.186.0/24,no-resolve
