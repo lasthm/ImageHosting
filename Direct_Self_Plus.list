@@ -4,3 +4,8 @@ DOMAIN-KEYWORD,agefans
 DOMAIN-KEYWORD,suufun
 DOMAIN-SUFFIX,cloudflare.com
 # DOMAIN-SUFFIX,workers.dev
+
+
+DOMAIN-SUFFIX,buyvm.net
+DOMAIN-SUFFIX,frantech.ca
+IP-CIDR,205.185.116.0/24,no-resolve
