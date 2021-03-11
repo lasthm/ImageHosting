@@ -2,8 +2,8 @@
 DOMAIN-KEYWORD,skyey
 DOMAIN-KEYWORD,agefans
 DOMAIN-KEYWORD,suufun
-# DOMAIN-SUFFIX,cloudflare.com
-# DOMAIN-SUFFIX,workers.dev
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,workers.dev
 
 DOMAIN,graph.microsoft.com
 
