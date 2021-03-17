@@ -7,7 +7,7 @@ DOMAIN-SUFFIX,workers.dev
 
 # DOMAIN,graph.microsoft.com
 
-DOMAIN-SUFFIX,lasthm.ml
+#DOMAIN-SUFFIX,lasthm.ml
 
 DOMAIN-SUFFIX,buyvm.net
 DOMAIN-SUFFIX,frantech.ca
