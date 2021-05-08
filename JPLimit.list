@@ -1,0 +1,17 @@
+# 内容：日本限定
+DOMAIN-SUFFIX,getchu.com
+DOMAIN-SUFFIX,mangabox.me
+DOMAIN-SUFFIX,line-apps.com
+PROCESS-NAME,jp.naver.linemanga.android
+# 小说家
+DOMAIN-SUFFIX,syosetu.com
+DOMAIN-KEYWORD,syosetu
+DOMAIN,syosetu.com
+DOMAIN,ncode.syosetu.com
+DOMAIN,mypage.syosetu.com
+DOMAIN,xmypage.syosetu.com
+DOMAIN,noc.syosetu.com
+DOMAIN,novel18.syosetu.com
+DOMAIN,mnlt.syosetu.com
+DOMAIN,mid.syosetu.com
+
