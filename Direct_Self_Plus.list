@@ -5,9 +5,11 @@ DOMAIN-KEYWORD,suufun
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,workers.dev
 
-# DOMAIN,graph.microsoft.com
+DOMAIN-SUFFIX,acggate.net
 
-#DOMAIN-SUFFIX,lasthm.ml
+#DOMAIN,graph.microsoft.com
+
+DOMAIN-SUFFIX,lasthm.ml
 
 DOMAIN-SUFFIX,buyvm.net
 DOMAIN-SUFFIX,frantech.ca
