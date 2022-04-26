@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,mangabox.me
 DOMAIN-SUFFIX,line-apps.com
 DOMAIN-SUFFIX,piccoma.com
 PROCESS-NAME,jp.naver.linemanga.android
+DOMAIN-SUFFIX,yahoo.co.jp
 # 小说家
 DOMAIN-SUFFIX,syosetu.com
 DOMAIN-KEYWORD,syosetu
