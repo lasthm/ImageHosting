@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,mangabox.me
 DOMAIN-SUFFIX,line-apps.com
 DOMAIN-SUFFIX,line.me
 DOMAIN-SUFFIX,piccoma.com
+DOMAIN-SUFFIX,kakaocdn.net
 PROCESS-NAME,jp.naver.linemanga.android
 DOMAIN-SUFFIX,yahoo.co.jp
 DOMAIN-SUFFIX,ganma.jp
