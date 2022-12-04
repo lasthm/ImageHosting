@@ -2,7 +2,7 @@
 DOMAIN-SUFFIX,cygames.jp
 DOMAIN-SUFFIX,priconne-redive.jp
 #DOMAIN-KEYWORD,priconne-redive
-PROCESS-NAME,jp.co.cygames.princessconnectredive
+#PROCESS-NAME,jp.co.cygames.princessconnectredive
 PROCESS-NAME,com.cygames.cycomi
 PROCESS-NAME,DMMGamePlayer.exe
 PROCESS-NAME,PrincessConnectReDive.exe
