@@ -9,6 +9,8 @@ PROCESS-NAME,jp.naver.linemanga.android
 DOMAIN-SUFFIX,yahoo.co.jp
 DOMAIN-SUFFIX,ganma.jp
 DOMAIN-SUFFIX,minori.ph
+DOMAIN-SUFFIX,toranoana.jp
+DOMAIN-SUFFIX,melonbooks.co.jp
 # 小说家
 DOMAIN-SUFFIX,syosetu.com
 DOMAIN-KEYWORD,syosetu
