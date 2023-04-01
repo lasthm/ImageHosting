@@ -12,7 +12,7 @@ DOMAIN-SUFFIX,minori.ph
 DOMAIN-SUFFIX,toranoana.jp
 DOMAIN-SUFFIX,melonbooks.co.jp
 # NicoNico
-USER-AGENT,Niconico*
+#USER-AGENT,Niconico*
 DOMAIN-SUFFIX,dmc.nico
 DOMAIN-SUFFIX,nicovideo.jp
 DOMAIN-SUFFIX,nimg.jp
