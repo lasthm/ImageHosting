@@ -20,8 +20,9 @@
   'use strict';
 
   // get title
-  const titleElement = document.querySelector('head title');
-  const title = titleElement ? titleElement.textContent.split('｜')[0].trim();
+  //const titleElement = document.querySelector('head title');
+  //const title = titleElement ? titleElement.textContent.split('｜')[0].trim();
+  const title = document.querySelector('head title').textContent.split('｜')[0].trim();
 
   // get URL of images
   const imageURLs = await axios({
