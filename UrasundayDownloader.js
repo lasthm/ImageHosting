@@ -21,7 +21,7 @@
   'use strict';
 
   // get title
-  const title1 = document.querySelector('.info h1').textContent.textContent.trim();
+  const title1 = document.querySelector('body > div.title > div.detail > div:nth-child(1) > div.info > h1:nth-child(1)').textContent.trim()
   const title2 = document.querySelector('body > div.title > div:nth-child(1) > div:nth-child(1)').textContent.trim();
 
   // get image urls from document
