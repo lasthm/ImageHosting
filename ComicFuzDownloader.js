@@ -88,7 +88,7 @@
       } else if (metadata.magazineIssue) {
         return metadata.magazineIssue.magazineName.trim() + ' ' + metadata.magazineIssue.magazineIssueName.trim()
       }
-    }
+    };
   
   // setup ImageDownloader
   ImageDownloader.init({
