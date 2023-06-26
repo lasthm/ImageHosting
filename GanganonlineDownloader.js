@@ -35,7 +35,7 @@
   if (!re.test(oldHref)) return;
 
   // collect url of images and title
-  const { imageURLs, title } = await new Promise(resolve => {
+  const { imageURLs, title1, title2 } = await new Promise(resolve => {
     const timer = setInterval(() => {
       try {
         const target = document.getElementById('__NEXT_DATA__');
