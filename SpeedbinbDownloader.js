@@ -31,7 +31,6 @@
   // get base URL
   const href = window.location.href;
   const baseURL = /123hon\.com|zerosumonline\.com|manga-mee\.jp/.test(href) ? href.replace('index.html', '') : href;
-  const baseURL = /futabanet\.jp/.test(href) ? href.replace('?wurl=.*', '') : href;
 
   // get url of json files
   const html = await axios.get(window.location.href).then(res => res.data);
