@@ -79,22 +79,30 @@
   const encryptedImageData = Array.from(config.matchAll(imageDataRegexp)).map(item => ({ url: 'https://img.comic-fuz.com' + item[1], iv: item[2], key: item[3] }));
 
   // get title
-  const title = getNameFromMetadata(metadata);
-  function getNameFromMetadata(metadata) {
-      if (metadata.bookIssue) {
-        return metadata.bookIssue.bookIssueName.trim()
-      } else if (metadata.viewerTitle) {
-        return metadata.sns?.body?.match(/(?<=「).*(?=」)/)?.[0]?.trim() ?? metadata.viewerTitle.trim()
-      } else if (metadata.magazineIssue) {
-        return metadata.magazineIssue.magazineName.trim() + ' ' + metadata.magazineIssue.magazineIssueName.trim()
+  const { mangaName, chapterMainName, chapterSubName } = await new Promise(resolve => {
+    const timer = setInterval(() => {
+      try {
+        const target = document.getElementById('__NEXT_DATA__');
+        const chapterData = JSON.parse(target.textContent).props.pageProps.data;
+        if (chapterData) {
+          clearInterval(timer);
+          resolve({
+            mangaName: chapterData.mangaName,
+            chapterMainName: chapterData.chapterMainName,
+            chapterSubName: chapterData.chapterSubName
+          });
+        }
+      } catch (error) {
+        console.log(error);
       }
-    };
+    }, 200);
+  });
   
   // setup ImageDownloader
   ImageDownloader.init({
     maxImageAmount: encryptedImageData.length,
     getImagePromises,
-    title
+    title: `${mangaName} ${chapterMainName} ${chapterSubName}`,
   });
 
   // collect promises of image
