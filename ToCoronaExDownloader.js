@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ToCoronaExDownloader
 // @namespace    https://github.com/Timesient/manga-download-scripts
-// @version      0.4
+// @version      0.5
 // @license      GPL-3.0
 // @author       Timesient
 // @description  Manga downloader for to-corona-ex.com
@@ -35,7 +35,11 @@
   // return if not reading chapter now
   if (!re.test(oldHref)) return;
 
-  const episodeData = await axios.get(`https://api.to-corona-ex.com${window.location.pathname}/begin_reading`).then(res => res.data);
+  const episodeData = await axios({
+    method: 'GET',
+    url: `https://api.to-corona-ex.com${window.location.pathname}/begin_reading`,
+    headers: { 'x-api-environment-key': 'K4FWy7Iqott9mrw37hDKfZ2gcLOwO-kiLHTwXT8ad1E=' }
+  }).then(res => res.data);
   const title = `episodeData.comic_title episodeData.episode_title`;
   const encryptedImageData = episodeData.pages.map(page => ({ url: page.page_image_url, hash: page.drm_hash }));
 
