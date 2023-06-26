@@ -43,7 +43,7 @@
   ImageDownloader.init({
     maxImageAmount: urls.length,
     getImagePromises,
-    title
+    title,
   });
 
   // collect promises of image
