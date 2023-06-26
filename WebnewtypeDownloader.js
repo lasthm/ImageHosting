@@ -20,8 +20,22 @@
   'use strict';
 
   // get title
-  const titleElement = document.querySelector('title');
-  const title = titleElement ? titleElement.textContent.split('|')[0].trim();
+  //const titleElement = document.querySelector('title');
+  //const title = titleElement ? titleElement.textContent.split('|')[0].trim();
+  const { title } = await new Promise(resolve => {
+    const timer = setInterval(() => {
+      const titleElement = document.querySelector('head title');
+      if (
+        titleElement &&
+        titleElement.textContent
+      ) {
+        clearInterval(timer);
+        resolve({
+          title: titleElement.textContent.split('|')[0].trim(),
+        });
+      }
+    }, 200);
+  });
 
   // get URL of images
   const imageURLs = await axios({
