@@ -35,10 +35,14 @@
   const html = await axios.get(window.location.href).then(res => res.data);
   const urls = html.match(/data\/\d+\.ptimg\.json/gm).map(json => baseURL + json);
 
+  // get title
+  const title = document.querySelector('title').textContent;
+
   // setup ImageDownloader
   ImageDownloader.init({
     maxImageAmount: urls.length,
     getImagePromises,
+    title
   });
 
   // collect promises of image
