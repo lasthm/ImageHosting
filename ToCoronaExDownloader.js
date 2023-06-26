@@ -35,8 +35,14 @@
   // return if not reading chapter now
   if (!re.test(oldHref)) return;
 
-  const episodeData = await axios.get(`https://api.to-corona-ex.com${window.location.pathname}/begin_reading`).then(res => res.data);
-  const title = `episodeData.comic_title episodeData.episode_title`;
+  const episodeData = await axios({
+    method: 'GET',
+    url: `https://api.to-corona-ex.com${window.location.pathname}/begin_reading`,
+    headers: { 'x-api-environment-key': 'K4FWy7Iqott9mrw37hDKfZ2gcLOwO-kiLHTwXT8ad1E=' }
+  }).then(res => res.data);
+  const title1 = episodeData.comic_title;
+  const title2 = episodeData.episode_title;
+  const title =  `title1 title2`;
   const encryptedImageData = episodeData.pages.map(page => ({ url: page.page_image_url, hash: page.drm_hash }));
 
   // setup ImageDownloader
