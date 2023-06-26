@@ -21,7 +21,8 @@
   'use strict';
 
   // get title
-  const title = document.querySelector('title');
+  const title1 = document.querySelector('.official-manga-viewer-first h1').textContent;
+  const title2 = document.querySelector('.official-manga-viewer-first h2').textContent;
 
   // get image urls from document
   const urls = await axios
@@ -33,7 +34,7 @@
   ImageDownloader.init({
     maxImageAmount: urls.length,
     getImagePromises,
-    title
+    title: `${title1} ${title2}`,
   });
 
   // collect promises of image
