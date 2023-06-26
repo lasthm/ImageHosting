@@ -35,7 +35,7 @@
   if (!re.test(oldHref)) return;
 
   // collect url of images and title
-  const { imageURLs, title1, title2 } = await new Promise(resolve => {
+  const { imageURLs, title2 } = await new Promise(resolve => {
     const timer = setInterval(() => {
       try {
         const target = document.getElementById('__NEXT_DATA__');
@@ -46,6 +46,22 @@
             imageURLs: chapterData.pages.map(page => window.location.origin + (page.image || page.linkImage).imageUrl),
             title1: chapterData.titleName,
             title2: chapterData.chapterName
+          });
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }, 200);
+  });
+  const { title1 } = await new Promise(resolve => {
+    const timer = setInterval(() => {
+      try {
+        const target = document.getElementById('__NEXT_DATA__');
+        const chapterData = JSON.parse(target.textContent).props.pageProps.data;
+        if (chapterData) {
+          clearInterval(timer);
+          resolve({
+            title1: chapterData.titleName
           });
         }
       } catch (error) {
