@@ -271,7 +271,7 @@
 
     // configure file structure of zip archive
     const zip = new JSZip();
-    const zipTitle = title.replaceAll(/\/|\\|\:|\*|\?|\"|\<|\>|\|/g, ''); // remove some characters
+    const zipTitle = title.replaceAll(/\/|\\|\:|\*|\?|\"|\<|\>|\|/g, '_'); // remove some characters
     const folder = zip.folder(zipTitle);
     for (const [index, image] of images.entries()) {
       const filename = `${String(index + 1).padStart(4, '0')}.${imageSuffix}`;
