@@ -21,7 +21,7 @@
   'use strict';
 
   // get title
-  const titleElement = document.querySelector('title').textContent;
+  const title = document.querySelector('title').textContent.split('|')[0].trim();
 
   // get image urls from document
   const urls = await axios
@@ -33,7 +33,7 @@
   ImageDownloader.init({
     maxImageAmount: urls.length,
     getImagePromises,
-    title: titleElement.textContent.split('|')[0].trim()
+    title
   });
 
   // collect promises of image
