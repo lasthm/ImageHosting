@@ -22,7 +22,7 @@
   // get title
   //const titleElement = document.querySelector('title');
   //const title = titleElement ? titleElement.textContent.split('|')[0].trim();
-  const { title } = await new Promise(resolve => {
+  const title = await new Promise(resolve => {
     const timer = setInterval(() => {
       const titleElement = document.querySelector('head title');
       if (
