@@ -17,7 +17,6 @@
 // @match        https://manga.zerosumonline.com/online/*
 // @match        https://comic-polaris.jp/ptdata/*
 // @match        https://manga-mee.jp/trial_reading/*
-// @match        https://*.futabanet.jp/*
 // @require      https://unpkg.com/axios@0.27.2/dist/axios.min.js
 // @require      https://unpkg.com/jszip@3.7.1/dist/jszip.min.js
 // @require      https://unpkg.com/file-saver@2.0.5/dist/FileSaver.min.js
@@ -36,14 +35,10 @@
   const html = await axios.get(window.location.href).then(res => res.data);
   const urls = html.match(/data\/\d+\.ptimg\.json/gm).map(json => baseURL + json);
 
-  // get title
-  const title = document.querySelector('title').textContent;
-
   // setup ImageDownloader
   ImageDownloader.init({
     maxImageAmount: urls.length,
     getImagePromises,
-    title,
   });
 
   // collect promises of image
