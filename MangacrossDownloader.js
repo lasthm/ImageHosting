@@ -37,13 +37,13 @@
   // get pages, volume and title from config
   const config = await axios.get(`${window.location.origin}${window.location.pathname}/viewer.json`).then(res => res.data);
   const { episode_pages: pages, volume, title } = config;
-  const comicTitle = document.querySelector('h1.comic-area__title').textContent;
+  const title0 = document.querySelector('h1.comic-area__title').textContent;
 
   // setup ImageDownloader
   ImageDownloader.init({
     maxImageAmount: pages.length,
     getImagePromises,
-    title: `${comicTitle} ${volume} ${title}`
+    title: `${title0} ${volume} ${title}`
   });
 
   // collect promises of image
