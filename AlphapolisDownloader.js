@@ -21,7 +21,7 @@
   'use strict';
 
   // get title
-  const title = document.querySelector('title').textContent;
+  const title = document.querySelector('title');
 
   // get image urls from document
   const urls = await axios
