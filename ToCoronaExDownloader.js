@@ -42,14 +42,13 @@
   }).then(res => res.data);
   const title1 = episodeData.comic_title;
   const title2 = episodeData.episode_title;
-  const title =  `title1 title2`;
   const encryptedImageData = episodeData.pages.map(page => ({ url: page.page_image_url, hash: page.drm_hash }));
 
   // setup ImageDownloader
   ImageDownloader.init({
     maxImageAmount: encryptedImageData.length,
     getImagePromises,
-    title
+    title: `${title1} ${title2}`,
   });
 
   // collect promises of image
