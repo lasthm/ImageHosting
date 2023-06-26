@@ -21,7 +21,8 @@
   'use strict';
 
   // get title
-  const title = document.querySelector('body > div.title > div:nth-child(1) > div:nth-child(1)').textContent.trim();
+  const title1 = document.querySelector('.info h1').textContent.textContent.trim();
+  const title2 = document.querySelector('body > div.title > div:nth-child(1) > div:nth-child(1)').textContent.trim();
 
   // get image urls from document
   const urls = await new Promise(resolve => {
@@ -37,7 +38,7 @@
   ImageDownloader.init({
     maxImageAmount: urls.length,
     getImagePromises,
-    title,
+    title: `${title1} ${title2}`,
     positionOptions: { top: '140px' }
   });
 
