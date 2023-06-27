@@ -37,7 +37,7 @@
   }).flat();
 
   // get title
-  const title0 = authData.cti;
+  const title0 = document.querySelector('.titleText').textContent;
   const title1 = title0.textContent.split(' - ')[1];
   const title2 = title0.textContent.split(' - ')[0];
 
