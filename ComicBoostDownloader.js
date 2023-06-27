@@ -37,15 +37,14 @@
   }).flat();
 
   // get title
-  const title0 = document.querySelector('.titleText').textContent;
-  const title1 = title0.textContent.split(' - ')[1];
-  const title2 = title0.textContent.split(' - ')[0];
+  const title = authData.cti;
+  const newtitle = title.split(' - ').reverse().join(" ");
 
   // setup ImageDownloader
   ImageDownloader.init({
     maxImageAmount: pages.length,
     getImagePromises,
-    title: `${title1} ${title2}`,
+    title: `${newtitle}`,
     imageSuffix: 'jpeg',
     zipOptions: { base64: true }
   });
