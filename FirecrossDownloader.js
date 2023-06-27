@@ -37,7 +37,6 @@
         clearInterval(timer);
         resolve({
           title0: titleElement.textContent.split('|')[0].trim(),
-          title: titleElement.textContent.split('|')[0].trim(),
           cgi: cgiElement.value,
           param: encodeURIComponent(paramElement.value),
           pageAmount: parseInt(pageAmountElement.textContent)
