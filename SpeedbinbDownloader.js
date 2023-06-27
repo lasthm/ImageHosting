@@ -17,6 +17,9 @@
 // @match        https://manga.zerosumonline.com/online/*
 // @match        https://comic-polaris.jp/ptdata/*
 // @match        https://manga-mee.jp/trial_reading/*
+// @match        https://www.comicride.jp/viewer/*
+// @match        https://www.comic-brise.com/comic_ep/*
+// @match        https://7irocomics.jp/webcomic/*
 // @require      https://unpkg.com/axios@0.27.2/dist/axios.min.js
 // @require      https://unpkg.com/jszip@3.7.1/dist/jszip.min.js
 // @require      https://unpkg.com/file-saver@2.0.5/dist/FileSaver.min.js
