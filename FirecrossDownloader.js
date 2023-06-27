@@ -20,7 +20,7 @@
   'use strict';
 
   // collect essential data
-  const { title0, cgi, param, pageAmount } = await new Promise(resolve => {
+  const { title, cgi, param, pageAmount } = await new Promise(resolve => {
     const timer = setInterval(() => {
       const titleElement = document.querySelector('head title');
       const cgiElement = document.querySelector('#meta input[name=cgi]');
@@ -36,7 +36,7 @@
       ) {
         clearInterval(timer);
         resolve({
-          title0: titleElement.textContent.split('|')[0].trim(),
+          title: titleElement.textContent.split('|')[0].trim(),
           cgi: cgiElement.value,
           param: encodeURIComponent(paramElement.value),
           pageAmount: parseInt(pageAmountElement.textContent)
@@ -45,8 +45,7 @@
     }, 200);
   });
 
-  const title1 = title0.textContent.split('-')[1].trim();
-  const title2 = title0.textContent.split('-')[0].trim();
+  const newtitle = title.split(' - ').reverse().join(" ");
 
   // get encrypted image data
   const encryptedImageData = Array(pageAmount).fill('').map((_, index) => ({
@@ -58,7 +57,7 @@
   ImageDownloader.init({
     maxImageAmount: encryptedImageData.length,
     getImagePromises,
-    title: `${title1} ${title2}`,
+    title: `${newtitle}`,
   });
   
   // collect promises of decrypted image
