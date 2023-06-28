@@ -64,7 +64,8 @@
 
   // get url of images and title
   const imageURLs = jsonData.readableProduct.pageStructure.pages.filter(item => item.src).map(item => item.src);
-  const title2 = jsonData.readableProduct.title;
+  const title0 = jsonData.readableProduct.title;
+  const title2 = title0.replaceAll(/\[|\【/g, '').replaceAll(/\]|\】/g, ' ');
   const title1 = document.querySelector('h1.series-header-title').textContent;
 
   // setup ImageDownloader
