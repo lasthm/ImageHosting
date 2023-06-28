@@ -5,10 +5,10 @@
 // @license      GPL-3.0
 // @author       Timesient
 // @description  Manga downloader for booklive.jp
-// @icon         https://booklive.jp/favicon.ico
+// @icon         https://gaugau.ismcdn.jp/common/images/monster/favicon.ico
 // @homepageURL  https://greasyfork.org/zh-CN/scripts/452562-booklivedownloader
 // @supportURL   https://github.com/Timesient/manga-download-scripts/issues
-// @match        https://*.futabanet.jp/*
+// @match        https://reader.futabanet.jp/*
 // @require      https://unpkg.com/axios@0.27.2/dist/axios.min.js
 // @require      https://unpkg.com/jszip@3.7.1/dist/jszip.min.js
 // @require      https://unpkg.com/file-saver@2.0.5/dist/FileSaver.min.js
@@ -21,9 +21,8 @@
   'use strict';
 
   // collect essential params
-  const href = window.location.href;
-  const baseURL = /futabanet\.jp/.test(href) ? href.split('?')[0].trim() : href;
-  const cid = baseURL.split('jp/')[1].trim();
+  //const cid = new URL(window.location.href).searchParams.get('cid');
+  const cid = (window.location.href).split('?')[0].trim().split('jp/')[1].trim();
   const randomString = SpeedReaderTools.generateRandomString32(cid);
 
   // generate config data
@@ -47,7 +46,7 @@
   // collect encrypted data of files
   const contentData = await axios.get(
     isTrial
-    ? `${config.contentServer}/content.js`
+    ? `${config.contentServer}/content.js&dmytime=${Date.now()`
     : `${config.contentServer}/sbcGetCntnt.php?cid=${cid}&p=${config.p}`
   ).then(res => res.data);
 
