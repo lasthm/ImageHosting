@@ -37,7 +37,7 @@
   // get pages, volume and title from config
   const config = await axios.get(`${window.location.origin}${window.location.pathname}/viewer.json`).then(res => res.data);
   const { episode_pages: pages, volume, title } = config;
-  const title0 = document.querySelector('h1.comic-area__title').textContent;
+  const title0 = document.querySelector('div.comic-detail-box h1.comic-area__title').textContent;
 
   // setup ImageDownloader
   ImageDownloader.init({
