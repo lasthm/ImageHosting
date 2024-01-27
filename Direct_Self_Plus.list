@@ -13,7 +13,6 @@ DOMAIN-SUFFIX,lasthm.ml
 
 DOMAIN-SUFFIX,buyvm.net
 DOMAIN-SUFFIX,frantech.ca
-DOMAIN-SUFFIX,hash.network
 #IP-CIDR,205.185.116.0/24,no-resolve
 
 DOMAIN-SUFFIX,kinh.cc
