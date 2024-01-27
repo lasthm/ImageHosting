@@ -8,4 +8,4 @@ PROCESS-NAME,hakuneko.exe
 #DOMAIN-SUFFIX,69shuba.com
 #DOMAIN-SUFFIX,69shu.org
 DOMAIN-SUFFIX,uaa.com
-DOMAIN,challenges.cloudflare.com
+#DOMAIN,challenges.cloudflare.com
