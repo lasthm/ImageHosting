@@ -14,7 +14,7 @@ DOMAIN-SUFFIX,melonbooks.co.jp
 DOMAIN-SUFFIX,cycomi.com
 # NicoNico
 #USER-AGENT,Niconico*
-DOMAIN-SUFFIX,comic-walker.com
+#DOMAIN-SUFFIX,comic-walker.com
 DOMAIN-SUFFIX,dmc.nico
 DOMAIN-SUFFIX,nicovideo.jp
 DOMAIN-SUFFIX,nimg.jp
