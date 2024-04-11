@@ -3,7 +3,7 @@
 #DOMAIN-SUFFIX,priconne-redive.jp
 DOMAIN-SUFFIX,api-priconne-redive.cygames.jp
 DOMAIN-SUFFIX,api-common01.cygames.jp
-IP-CIDR,223.119.50.0/24,no-resolve
+IP-CIDR,223.119.50.138/32,no-resolve
 #DOMAIN-KEYWORD,priconne-redive
 #PROCESS-NAME,jp.co.cygames.princessconnectredive
 PROCESS-NAME,com.cygames.cycomi
