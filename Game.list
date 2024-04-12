@@ -3,7 +3,6 @@
 #DOMAIN-SUFFIX,priconne-redive.jp
 DOMAIN-SUFFIX,api-priconne-redive.cygames.jp
 DOMAIN-SUFFIX,api-common01.cygames.jp
-DOMAIN,steamcdn-a.akamaihd.net
 #DOMAIN-KEYWORD,priconne-redive
 #PROCESS-NAME,jp.co.cygames.princessconnectredive
 PROCESS-NAME,com.cygames.cycomi
