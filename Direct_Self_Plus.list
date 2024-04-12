@@ -5,6 +5,8 @@ DOMAIN-KEYWORD,suufun
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,workers.dev
 
+DOMAIN,steamcdn-a.akamaihd.net
+
 DOMAIN-SUFFIX,acggate.net
 
 #DOMAIN,graph.microsoft.com
