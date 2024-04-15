@@ -1,11 +1,14 @@
-PROCESS-NAME,eu.kanade.tachiyomi
+#PROCESS-NAME,eu.kanade.tachiyomi
 # DOMAIN-KEYWORD,banzhu
-DOMAIN-KEYWORD,copymanga
-PROCESS-NAME,hakuneko.exe
+#DOMAIN-KEYWORD,copymanga
+#PROCESS-NAME,hakuneko.exe
 
 #DOMAIN-SUFFIX,69shu.com
 #DOMAIN-SUFFIX,69shuba.cc
 #DOMAIN-SUFFIX,69shuba.com
 #DOMAIN-SUFFIX,69shu.org
-DOMAIN-SUFFIX,uaa.com
+#DOMAIN-SUFFIX,uaa.com
 #DOMAIN,challenges.cloudflare.com
+
+DOMAIN-SUFFIX,shonenjumpplus.com
+DOMAIN-SUFFIX,gigaviewer.com
