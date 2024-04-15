@@ -5,9 +5,9 @@ DOMAIN-KEYWORD,suufun
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,workers.dev
 
-DOMAIN,steamcdn-a.akamaihd.net
-DOMAIN-KEYWORD,akamai
-IP-CIDR,223.119.50.0/24,no-resolve
+#DOMAIN,steamcdn-a.akamaihd.net
+#DOMAIN-KEYWORD,akamai
+#IP-CIDR,223.119.50.0/24,no-resolve
 
 DOMAIN-SUFFIX,acggate.net
 
