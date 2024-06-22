@@ -15,3 +15,4 @@
 IP-CIDR,223.119.50.0/24,no-resolve
 DOMAIN-SUFFIX,comic-walker.com
 DOMAIN-SUFFIX,tmp.link
+DOMAIN,tmp-api.vx-cdn.com
