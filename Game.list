@@ -7,8 +7,8 @@ DOMAIN-SUFFIX,api-priconne-redive.cygames.jp
 #PROCESS-NAME,jp.co.cygames.princessconnectredive
 PROCESS-NAME,com.cygames.cycomi
 PROCESS-NAME,DMMbookviewer.exe
-#PROCESS-NAME,DMMGamePlayer.exe
-#PROCESS-NAME,PrincessConnectReDive.exe
+PROCESS-NAME,DMMGamePlayer.exe
+PROCESS-NAME,PrincessConnectReDive.exe
 #IP-CIDR,13.67.186.0/24,no-resolve
 #IP-CIDR,23.196.225.0/24,no-resolve
 #IP-CIDR,23.50.16.0/24,no-resolve
