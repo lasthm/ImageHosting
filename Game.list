@@ -13,6 +13,8 @@ DOMAIN-SUFFIX,dmm.com
 DOMAIN-SUFFIX,dmm.co.jp
 DOMAIN-SUFFIX,dmm-extension.com
 DOMAIN-SUFFIX,evo.dmmapis.com
+DOMAIN-SUFFIX,omotenashi.cygames.jp
+DOMAIN-SUFFIX,dmmgames.com
 DOMAIN,prd-priconne-redive.akamaized.net
 #IP-CIDR,13.67.186.0/24,no-resolve
 #IP-CIDR,23.196.225.0/24,no-resolve
