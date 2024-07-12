@@ -13,6 +13,6 @@
 #DOMAIN-SUFFIX,shonenjumpplus.com
 #DOMAIN-SUFFIX,gigaviewer.com
 IP-CIDR,223.119.50.0/24,no-resolve
-DOMAIN-SUFFIX,comic-walker.com
+#DOMAIN-SUFFIX,comic-walker.com
 DOMAIN-SUFFIX,tmp.link
 DOMAIN-SUFFIX,vx-cdn.com
