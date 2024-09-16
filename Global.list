@@ -1,0 +1,18 @@
+#PROCESS-NAME,eu.kanade.tachiyomi
+# DOMAIN-KEYWORD,banzhu
+#DOMAIN-KEYWORD,copymanga
+#PROCESS-NAME,hakuneko.exe
+
+#DOMAIN-SUFFIX,69shu.com
+#DOMAIN-SUFFIX,69shuba.cc
+#DOMAIN-SUFFIX,69shuba.com
+#DOMAIN-SUFFIX,69shu.org
+#DOMAIN-SUFFIX,uaa.com
+#DOMAIN,challenges.cloudflare.com
+
+#DOMAIN-SUFFIX,shonenjumpplus.com
+#DOMAIN-SUFFIX,gigaviewer.com
+IP-CIDR,223.119.50.0/24,no-resolve
+#DOMAIN-SUFFIX,comic-walker.com
+DOMAIN-SUFFIX,tmp.link
+DOMAIN-SUFFIX,vx-cdn.com

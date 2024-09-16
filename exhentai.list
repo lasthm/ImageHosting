@@ -1,0 +1,13 @@
+# 日本IP无法显示部分画廊（版权争议）
+DOMAIN-SUFFIX,e-hentai.org
+DOMAIN-SUFFIX,ehgt.org
+DOMAIN-SUFFIX,ehwiki.org
+DOMAIN-SUFFIX,exhentai.org
+DOMAIN-SUFFIX,hath.network
+DOMAIN-SUFFIX,hentaiverse.org
+DOMAIN-SUFFIX,api.e-hentai.org
+DOMAIN-SUFFIX,upload.e-hentai.org
+DOMAIN-SUFFIX,s.exhentai.org
+DOMAIN-SUFFIX,repo.e-hentai.org
+DOMAIN-SUFFIX,forums.e-hentai.org
+IP-CIDR,178.175.128.0/21,no-resolve
