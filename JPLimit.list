@@ -6,6 +6,7 @@ DOMAIN-SUFFIX,line.me
 DOMAIN-SUFFIX,piccoma.com
 DOMAIN-SUFFIX,kakaocdn.net
 PROCESS-NAME,jp.naver.linemanga.android
+PROCESS-NAME,DMMbookviewer.exe
 DOMAIN-SUFFIX,yahoo.co.jp
 DOMAIN-SUFFIX,ganma.jp
 DOMAIN-SUFFIX,minori.ph
