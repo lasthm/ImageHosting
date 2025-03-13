@@ -17,3 +17,9 @@ IP-CIDR,223.119.50.0/24,no-resolve
 DOMAIN-SUFFIX,tmp.link
 DOMAIN-SUFFIX,vx-cdn.com
 DOMAIN,tmplink-sec.vxtrans.com
+
+DOMAIN-SUFFIX,greasyfork.org
+DOMAIN-SUFFIX,comic-days.com
+DOMAIN-SUFFIX,cloudfront.net
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,jumptoon.com
