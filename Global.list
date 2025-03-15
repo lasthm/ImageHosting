@@ -10,17 +10,13 @@
 #DOMAIN-SUFFIX,uaa.com
 #DOMAIN,challenges.cloudflare.com
 
-#DOMAIN-SUFFIX,shonenjumpplus.com
-#DOMAIN-SUFFIX,gigaviewer.com
 IP-CIDR,223.119.50.0/24,no-resolve
-#DOMAIN-SUFFIX,comic-walker.com
 DOMAIN-SUFFIX,tmp.link
 DOMAIN-SUFFIX,vx-cdn.com
 DOMAIN,tmplink-sec.vxtrans.com
 
 DOMAIN-SUFFIX,south-plus.net
 DOMAIN-SUFFIX,greasyfork.org
-DOMAIN-SUFFIX,comic-days.com
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,cloudflare.com
-DOMAIN-SUFFIX,jumptoon.com
+
