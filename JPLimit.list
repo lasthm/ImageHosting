@@ -11,8 +11,6 @@ DOMAIN-SUFFIX,toranoana.jp
 DOMAIN-SUFFIX,melonbooks.co.jp
 DOMAIN-KEYWORD,erogamescape
 DOMAIN-SUFFIX,paypay.ne.jp
-
-
 # web漫画
 DOMAIN-SUFFIX,shonenjumpplus.com
 DOMAIN-SUFFIX,gigaviewer.com
@@ -25,7 +23,6 @@ DOMAIN-SUFFIX,mangabox.me
 DOMAIN-SUFFIX,jumptoon.com
 DOMAIN-SUFFIX,comic-days.com
 DOMAIN-SUFFIX,kakaocdn.net
-
 # NicoNico
 #USER-AGENT,Niconico*
 #DOMAIN-SUFFIX,comic-walker.com
@@ -35,7 +32,6 @@ DOMAIN-SUFFIX,nimg.jp
 DOMAIN-SUFFIX,nicomanga.jp
 DOMAIN-SUFFIX,nicodic.jp
 DOMAIN-SUFFIX,nicoseiga.jp
-
 # 小说家
 DOMAIN-SUFFIX,syosetu.com
 DOMAIN-KEYWORD,syosetu
