@@ -23,6 +23,7 @@ DOMAIN-SUFFIX,mangabox.me
 DOMAIN-SUFFIX,jumptoon.com
 DOMAIN-SUFFIX,comic-days.com
 DOMAIN-SUFFIX,kakaocdn.net
+PROCESS-NAME,jp.co.kodansha.android.magazinepocket
 # NicoNico
 #USER-AGENT,Niconico*
 #DOMAIN-SUFFIX,comic-walker.com
