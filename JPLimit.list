@@ -24,6 +24,10 @@ DOMAIN-SUFFIX,jumptoon.com
 DOMAIN-SUFFIX,comic-days.com
 DOMAIN-SUFFIX,kakaocdn.net
 PROCESS-NAME,jp.co.kodansha.android.magazinepocket
+DOMAIN-SUFFIX,futabanet.jp
+DOMAIN-SUFFIX,futabanex.jp
+DOMAIN-SUFFIX,comic-growl.com
+DOMAIN-SUFFIX,comici.jp
 # NicoNico
 #USER-AGENT,Niconico*
 #DOMAIN-SUFFIX,comic-walker.com
