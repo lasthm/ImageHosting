@@ -2,4 +2,3 @@ IP-CIDR,205.185.116.0/24,no-resolve
 DOMAIN-SUFFIX,workers.dev
 DOMAIN-SUFFIX,raws.dev
 DOMAIN-SUFFIX,buyvm.net
-DOMAIN-SUFFIX,greasyfork.org
