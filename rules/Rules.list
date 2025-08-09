@@ -4,6 +4,11 @@ DOMAIN-SUFFIX,wallhaven.cc
 DOMAIN-SUFFIX,gdstudio.xyz
 DOMAIN-SUFFIX,manhuabika.com
 
+# BuyVM
+DOMAIN-SUFFIX,workers.dev
+DOMAIN-SUFFIX,raws.dev
+DOMAIN-SUFFIX,buyvm.net
+
 # Tmplink
 DOMAIN-SUFFIX,tmp.link
 DOMAIN-SUFFIX,vx-cdn.com
