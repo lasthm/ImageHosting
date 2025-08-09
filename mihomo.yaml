@@ -1,0 +1,329 @@
+proxy-providers:
+  魅影:
+    type: http
+    url: "__MEIYING_URL__"
+    interval: 86400
+    path: "./providers/魅影.yaml"
+    health-check:
+      enable: true
+      interval: 300
+      url: https://www.gstatic.com/generate_204
+
+  云洞:
+    type: http
+    url: "__YUNDONG_URL__"
+    interval: 86400
+    path: "./providers/云洞.yaml"
+    health-check:
+      enable: true
+      interval: 300
+      url: https://www.gstatic.com/generate_204
+
+proxy-groups:
+  - name: "🚀 节点选择"
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - DIRECT
+      - 🇭🇰 香港(魅影)
+      - 🇭🇰 香港(云洞)
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇺🇸 美国
+      - 🌐 其他地区
+      - 🎮 游戏专用
+
+  - name: ♻️ 自动选择
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    tolerance: 50
+    use:
+      - 魅影
+    filter: '^(?=.*(?i)(HK|Hong Kong|香港|港))(?!.*(?i)(2x|4x)).*$'
+
+  - name: "📺 国外媒体"
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🇭🇰 香港(魅影)
+      - 🚀 节点选择
+      - 🇭🇰 香港(云洞)
+      - 🇹🇼 台湾
+      - 🇸🇬 新加坡
+      - 🇯🇵 日本
+      - 🇺🇸 美国
+
+  - name: "🎮 游戏专用"
+    type: select
+    use:
+      - 魅影
+    filter: '(?i)(U-4x|U-2x)'
+
+  - name: "Ⓜ️ 微软服务"
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+
+  - name: "🤖 AI节点"
+    type: url-test
+    url: 'https://api.openai.com/v1/completions'
+    interval: 300
+    tolerance: 100
+    use:
+      - 魅影
+      - 云洞
+    filter: '^(?=.*(?i)(US|America|United States|GPT|美国))(?!.*(?i)(4x)).*$'
+
+  - name: "🎯 全球直连"
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+
+  - name: "🚫 广告屏蔽"
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: "🐟 漏网之鱼"
+    type: select
+    proxies:
+      - 🇭🇰 香港(云洞)
+      - 🚀 节点选择
+      - DIRECT
+      - ♻️ 自动选择
+      - 🇭🇰 香港(魅影)
+      - 🇯🇵 日本
+      - 🇺🇸 美国
+      - 🎮 游戏专用
+
+  - name: 🇭🇰 香港(魅影)
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - 魅影
+    filter: '^(?=.*(?i)(HK|Hong Kong|香港|港))(?!.*(?i)(2x|4x)).*$'
+
+  - name: 🇭🇰 香港(云洞)
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - 云洞
+    filter: '(?i)(HK|Hong Kong|香港|港)'
+
+  - name: 🇹🇼 台湾
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - 魅影
+      - 云洞
+    filter: '(?i)(TW|Taiwan|台湾|台)'
+
+  - name: 🇸🇬 新加坡
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - 魅影
+      - 云洞
+    filter: '^(?=.*(?i)(SG|Singapore|新加坡|狮城|坡))(?!.*(?i)(2x|4x)).*$'
+
+  - name: 🇯🇵 日本
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - 魅影
+      - 云洞
+    filter: '^(?=.*(?i)(JP|Japan|日本|川日|东京|大阪|泉日|埼玉|沪日|深日))(?!.*(?i)(2x|4x)).*$'
+
+  - name: 🇺🇸 美国
+    type: url-test
+    url: 'https://www.gstatic.com/generate_204'
+    interval: 300
+    use:
+      - 魅影
+      - 云洞
+    filter: '^(?=.*(?i)(US|America|United States|美国|美))(?!.*(?i)(2x|4x)).*$'
+
+  - name: 🌐 其他地区
+    type: select
+    use:
+      - 魅影
+      - 云洞
+    filter: '^(?!.*(?i)(HK|Hong Kong|香港|港|TW|Taiwan|台湾|台|SG|Singapore|新加坡|狮城|坡|JP|Japan|日本|US|America|United States|美国|美|流量|剩余|应急|官网|套餐)).*$'
+
+rule-providers:
+  Direct:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/rules/Direct.list'
+    path: ./ruleset/Direct.yaml
+    interval: 86400
+    format: text
+  GameDownload:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/rules/GameDownload.list'
+    path: ./ruleset/GameDownload.yaml
+    interval: 86400
+    format: text
+  US:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/rules/US.list'
+    path: ./ruleset/US.yaml
+    interval: 86400
+    format: text
+  JP:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/refs/heads/main/rules/JP.list'
+    path: ./ruleset/JP.yaml
+    interval: 86400
+    format: text
+  Rules:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/rules/Rules.list'
+    path: ./ruleset/Rules.yaml
+    interval: 86400
+    format: text
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list'
+    path: ./ruleset/GoogleFCM.yaml
+    interval: 86400
+    format: text
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list'
+    path: ./ruleset/GoogleCN.yaml
+    interval: 86400
+    format: text
+  SteamCN:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list'
+    path: ./ruleset/SteamCN.yaml
+    interval: 86400
+    format: text
+  OneDrive:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OneDrive.list'
+    path: ./ruleset/OneDrive.yaml
+    interval: 86400
+    format: text
+  ChinaMerged:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/ChinaMerged.list'
+    path: ./ruleset/ChinaMerged.yaml
+    interval: 86400
+    format: text
+  Microsoft:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list'
+    path: ./ruleset/Microsoft.yaml
+    interval: 86400
+    format: text
+  AIMerged:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/AIMerged.list'
+    path: ./ruleset/AIMerged.yaml
+    interval: 86400
+    format: text
+  Apple:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list'
+    path: ./ruleset/Apple.yaml
+    interval: 86400
+    format: text
+  GameMerged:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/GameMerged.list'
+    path: ./ruleset/GameMerged.yaml
+    interval: 86400
+    format: text
+  AdBlockMerged:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/AdBlockMerged.list'
+    path: ./ruleset/AdBlockMerged.yaml
+    interval: 86400
+    format: text
+  ProxyMediaMerged:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/ProxyMediaMerged.list'
+    path: ./ruleset/ProxyMediaMerged.yaml
+    interval: 86400
+    format: text
+  Bahamut:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list'
+    path: ./ruleset/Bahamut.yaml
+    interval: 86400
+    format: text
+  ProxyGFWlist:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list'
+    path: ./ruleset/ProxyGFWlist.yaml
+    interval: 86400
+    format: text
+  Telegram:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list'
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+    format: text
+
+rules:
+  # --- 自定义规则 ---
+  - RULE-SET,US,🇺🇸 美国
+  - RULE-SET,JP,🇯🇵 日本
+  - RULE-SET,Rules,🚀 节点选择
+  - RULE-SET,Direct,🎯 全球直连
+  - RULE-SET,GameDownload,🎯 全球直连
+
+  # --- 直连规则 ---
+  - RULE-SET,Apple,🎯 全球直连
+  - RULE-SET,GoogleFCM,🎯 全球直连
+  - RULE-SET,GoogleCN,🎯 全球直连
+  - RULE-SET,SteamCN,🎯 全球直连
+  - RULE-SET,OneDrive,🎯 全球直连
+  - RULE-SET,ChinaMerged,🎯 全球直连
+  
+  # --- 默认规则 ---
+  - RULE-SET,AIMerged,🤖 AI节点
+  - RULE-SET,GameMerged,🎮 游戏专用
+  - RULE-SET,ProxyMediaMerged,📺 国外媒体
+  - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,Bahamut,🇹🇼 台湾
+  - RULE-SET,Telegram,🚀 节点选择
+  - RULE-SET,ProxyGFWlist,🚀 节点选择
+  
+  # --- 广告屏蔽 ---
+  - RULE-SET,AdBlockMerged,🚫 广告屏蔽
+
+  # --- GEOIP兜底 ---
+  - GEOIP,CN,🎯 全球直连
+  # --- 最终匹配 ---
+  - MATCH,🐟 漏网之鱼
