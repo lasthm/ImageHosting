@@ -16,14 +16,18 @@ function main(config) {
       name: "🚀 节点选择",
       type: "select",
       proxies: [
-        "♻️ 自动选择",
         "DIRECT",
+        "⚡ 专线",
         "🇭🇰 香港",
-        "🇨🇳 台湾",
-        "🇸🇬 新加",
         "🇯🇵 日本",
         "🇺🇲 美国",
-        "🍉 其他地区"
+        "🇸🇬 新加坡",
+        "🇨🇳 台湾",
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区",
+        "🚀 手动切换"
       ]
     },
     {
@@ -42,8 +46,8 @@ function main(config) {
       proxies: [
         "♻️ 自动选择",
         "🚀 节点选择",
-        "🍉 其他地区",
-        "🇸🇬 新加",
+        "🌐 其他地区",
+        "🇸🇬 新加坡",
         "🇭🇰 香港",
         "🇨🇳 台湾",
         "🇯🇵 日本",
@@ -68,7 +72,7 @@ function main(config) {
         "🇺🇲 美国",
         "🇭🇰 香港",
         "🇨🇳 台湾",
-        "🇸🇬 新加",
+        "🇸🇬 新加坡",
         "🇯🇵 日本"
       ]
     },
@@ -78,11 +82,11 @@ function main(config) {
       proxies: [
         "DIRECT",
         "🚀 节点选择",
-        "🍉 其他地区",
+        "🌐 其他地区",
         "🇺🇲 美国",
         "🇭🇰 香港",
         "🇨🇳 台湾",
-        "🇸🇬 新加",
+        "🇸🇬 新加坡",
         "🇯🇵 日本"
       ]
     },
@@ -92,7 +96,7 @@ function main(config) {
       proxies: [
         "DIRECT",
         "🚀 节点选择",
-        "🍉 其他地区"
+        "🌐 其他地区"
       ]
     },
     {
@@ -101,7 +105,7 @@ function main(config) {
       proxies: [
         "DIRECT",
         "🚀 节点选择",
-        "🍉 其他地区"
+        "🌐 其他地区"
       ]
     },
     {
@@ -120,7 +124,7 @@ function main(config) {
       proxies: [
         "DIRECT"
         // "🚀 节点选择", // Optionally add other fallbacks if DIRECT is not primary
-        // "🍉 其他地区"
+        // "🌐 其他地区"
       ]
     },
     {
@@ -139,10 +143,10 @@ function main(config) {
         "DIRECT",
         "♻️ 自动选择",
         "🚀 节点选择",
-        "🍉 其他地区",
+        "🌐 其他地区",
         "🇭🇰 香港",
         "🇨🇳 台湾",
-        "🇸🇬 新加",
+        "🇸🇬 新加坡",
         "🇯🇵 日本",
         "🇺🇲 美国"
       ]
@@ -175,7 +179,7 @@ function main(config) {
       // proxies: []
     },
     {
-      name: "🇸🇬 新加",
+      name: "🇸🇬 新加坡",
       type: "url-test",
       url: "http://www.gstatic.com/generate_204",
       interval: 300,
@@ -195,7 +199,7 @@ function main(config) {
       // proxies: []
     },
     {
-      name: "🍉 其他地区",
+      name: "🌐 其他地区",
       type: "select", // Per INI, this was a select group with a filter
       "include-all": true,
       filter: "^(?!.*?(?:港|HK|🇭🇰|日本|JP|美|US|新加坡|坡|SG|台|新北|彰化|TW)).+$"
