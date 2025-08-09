@@ -502,7 +502,7 @@ rules:
   - RULE-SET,GameMerged,🎮 游戏平台
   - RULE-SET,GameDownload,⚽ 游戏下载
   - RULE-SET,ProxyMediaMerged,🎥 海外媒体
-  - RULE-SET,Bahamut,🇹🇼 台湾
+  - RULE-SET,Bahamut,🇨🇳 台湾
   - RULE-SET,Telegram,🚀 节点选择
   - RULE-SET,ProxyGFWlist,🚀 节点选择
   
