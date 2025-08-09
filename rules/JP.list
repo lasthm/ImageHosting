@@ -1,16 +1,4 @@
 # 内容：日本限定
-DOMAIN-SUFFIX,getchu.com
-DOMAIN-SUFFIX,line-apps.com
-DOMAIN-SUFFIX,line.me
-DOMAIN-SUFFIX,kakaocdn.net
-PROCESS-NAME,jp.naver.linemanga.android
-PROCESS-NAME,DMMbookviewer.exe
-DOMAIN-SUFFIX,yahoo.co.jp
-DOMAIN-SUFFIX,minori.ph
-DOMAIN-SUFFIX,toranoana.jp
-DOMAIN-SUFFIX,melonbooks.co.jp
-DOMAIN-KEYWORD,erogamescape
-DOMAIN-SUFFIX,paypay.ne.jp
 # web漫画
 DOMAIN-SUFFIX,shonenjumpplus.com
 DOMAIN-SUFFIX,gigaviewer.com
@@ -28,15 +16,29 @@ DOMAIN-SUFFIX,futabanet.jp
 DOMAIN-SUFFIX,futabanex.jp
 DOMAIN-SUFFIX,comic-growl.com
 DOMAIN-SUFFIX,comici.jp
+
+# 各类网站
+DOMAIN-SUFFIX,getchu.com
+DOMAIN-SUFFIX,line-apps.com
+DOMAIN-SUFFIX,line.me
+DOMAIN-SUFFIX,kakaocdn.net
+PROCESS-NAME,jp.naver.linemanga.android
+PROCESS-NAME,DMMbookviewer.exe
+DOMAIN-SUFFIX,yahoo.co.jp
+DOMAIN-SUFFIX,minori.ph
+DOMAIN-SUFFIX,toranoana.jp
+DOMAIN-SUFFIX,melonbooks.co.jp
+DOMAIN-KEYWORD,erogamescape
+DOMAIN-SUFFIX,paypay.ne.jp
+
 # NicoNico
-#USER-AGENT,Niconico*
-#DOMAIN-SUFFIX,comic-walker.com
 DOMAIN-SUFFIX,dmc.nico
 DOMAIN-SUFFIX,nicovideo.jp
 DOMAIN-SUFFIX,nimg.jp
 DOMAIN-SUFFIX,nicomanga.jp
 DOMAIN-SUFFIX,nicodic.jp
 DOMAIN-SUFFIX,nicoseiga.jp
+
 # 小说家
 DOMAIN-SUFFIX,syosetu.com
 DOMAIN-KEYWORD,syosetu
