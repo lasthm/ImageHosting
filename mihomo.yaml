@@ -1,19 +1,46 @@
-proxy-providers:
-  魅影:
-    type: http
-    url: "__MEIYING_URL__"
-    interval: 86400
-    path: "./providers/魅影.yaml"
-    health-check:
-      enable: true
-      interval: 300
-      url: https://www.gstatic.com/generate_204
+allow-lan: false
+mode: rule
+log-level: warning
+external-controller: 127.0.0.1:9090
+unified-delay: true
+keep-alive-interval: 360
+global-client-fingerprint: chrome
+clash-for-android:
+  append-system-dns: false
+cfw-bypass:
+  - localhost
+  - 127.*
+  - 10.*
+  - 172.16.*
+  - 192.168.*
+  - <local>
+hosts:
+  mtalk.google.com: 108.177.125.188
+  paoluz.link: 104.21.71.42
+dns:
+  enable: true
+  listen: 127.0.0.1:5335
+  default-nameserver: [180.184.1.1, 119.29.29.29, 223.5.5.5]
+  proxy-server-nameserver: [https://223.5.5.5/dns-query, https://doh.pub/dns-query]
+  use-hosts: true
+  use-system-hosts: true
+  enhanced-mode: fake-ip
+  fake-ip-filter: ["*.market.xiaomi.com","*.n.n.srv.nintendo.net", +.stun.playstation.net, xbox.*.*.microsoft.com, "*.msftncsi.com", "*.msftconnecttest.com", WORKGROUP, "*.lan", stun.*.*.*, stun.*.*, time.windows.com, time.nist.gov, time.apple.com, time.asia.apple.com, "*.ntp.org.cn", "*.openwrt.pool.ntp.org", time1.cloud.tencent.com, time.ustc.edu.cn, pool.ntp.org, ntp.ubuntu.com, "*.*.xboxlive.com", speedtest.cros.wr.pvp.net, stun.services.mozilla1.com, ntp.nasa.gov]
+  nameserver: [https://dns.alidns.com/dns-query, https://doh.pub/dns-query, https://223.5.5.5/dns-query]
+  nameserver-policy:
+    "geosite:bytedance":
+        - 180.184.1.1
+        - 180.184.2.2
+    "geosite:cn,apple,category-games@cn,private":
+        - 119.29.29.29
+        - 223.6.6.6
 
-  云洞:
+proxy-providers:
+  Paoluz:
     type: http
-    url: "__YUNDONG_URL__"
+    url: "https://appv2.nloli.xyz/tako_api/sub?token=SL1x1lGS2ZVLW378&base=list&addFlag=yes"
     interval: 86400
-    path: "./providers/云洞.yaml"
+    path: "./providers/Paoluz.yaml"
     health-check:
       enable: true
       interval: 300
@@ -23,148 +50,276 @@ proxy-groups:
   - name: "🚀 节点选择"
     type: select
     proxies:
-      - ♻️ 自动选择
       - DIRECT
-      - 🇭🇰 香港(魅影)
-      - 🇭🇰 香港(云洞)
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
+      - ⚡ 专线
+      - 🇭🇰 香港
       - 🇯🇵 日本
       - 🇺🇸 美国
+      - 🇸🇬 新加坡
+      - 🇨🇳 台湾
+      - 🇰🇷 韩国
+      - 🇭 Hysteria2
+      - 🇷 Reality
       - 🌐 其他地区
-      - 🎮 游戏专用
+      - 🚀 手动切换
 
-  - name: ♻️ 自动选择
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    tolerance: 50
+  - name: "🚀 手动切换"
+    type: select
     use:
-      - 魅影
-    filter: '^(?=.*(?i)(HK|Hong Kong|香港|港))(?!.*(?i)(2x|4x)).*$'
+      - Paoluz
 
-  - name: "📺 国外媒体"
+  - name: "🇯🇵 JP"
     type: select
     proxies:
-      - ♻️ 自动选择
-      - 🇭🇰 香港(魅影)
-      - 🚀 节点选择
-      - 🇭🇰 香港(云洞)
-      - 🇹🇼 台湾
-      - 🇸🇬 新加坡
       - 🇯🇵 日本
-      - 🇺🇸 美国
-
-  - name: "🎮 游戏专用"
-    type: select
+      - ⚡ 专线
+      - 🇭 Hysteria2
+      - 🇷 Reality
     use:
-      - 魅影
-    filter: '(?i)(U-4x|U-2x)'
+      - Paoluz
+    filter: "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)"
 
-  - name: "Ⓜ️ 微软服务"
+  - name: "🖼️ EH"
     type: select
     proxies:
       - DIRECT
-      - 🚀 节点选择
-
-  - name: "🤖 AI节点"
-    type: url-test
-    url: 'https://api.openai.com/v1/completions'
-    interval: 300
-    tolerance: 100
     use:
-      - 魅影
-      - 云洞
-    filter: '^(?=.*(?i)(US|America|United States|GPT|美国))(?!.*(?i)(4x)).*$'
-
-  - name: "🎯 全球直连"
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 节点选择
+      - Paoluz
 
   - name: "🚫 广告屏蔽"
     type: select
     proxies:
       - REJECT
       - DIRECT
+      - 🚀 节点选择
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇸 美国
+      - 🇸🇬 新加坡
+      - 🇨🇳 台湾
+      - 🇰🇷 韩国
+      - 🇭 Hysteria2
+      - 🇷 Reality
+      - 🌐 其他地区
+
+  - name: "📙 BW"
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ⚡ 专线
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇸 美国
+      - 🇸🇬 新加坡
+      - 🇨🇳 台湾
+      - 🇰🇷 韩国
+      - 🇭 Hysteria2
+      - 🇷 Reality
+      - 🌐 其他地区
+
+  - name: "🕮 69"
+    type: select
+    proxies:
+      - DIRECT
+    use:
+      - Paoluz
+
+  - name: "🎥 海外媒体"
+    type: select
+    use:
+      - Paoluz
+    filter: "宽频"
+    proxies:
+      - 🇨🇳 台湾
+
+  - name: "📺 哔哩哔哩"
+    type: select
+    proxies:
+      - 🎯 全球直连
+      - 🇨🇳 台湾
+      - 🇭🇰 香港
+      - 🇭 Hysteria2
+      - 🇷 Reality
+
+  - name: "🍎 苹果服务"
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇸 美国
+      - 🇸🇬 新加坡
+      - 🇨🇳 台湾
+      - 🇰🇷 韩国
+      - 🇭 Hysteria2
+      - 🇷 Reality
+      - 🌐 其他地区
+      - 🚀 手动切换
+
+  - name: "🎮 游戏平台"
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ⚡ 专线
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇸 美国
+      - 🇸🇬 新加坡
+      - 🇨🇳 台湾
+      - 🇰🇷 韩国
+      - 🇭 Hysteria2
+      - 🇷 Reality
+      - 🌐 其他地区
+      - 🚀 手动切换
+
+  - name: "⚽ 游戏下载"
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ⚡ 专线
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇸 美国
+      - 🇸🇬 新加坡
+      - 🇨🇳 台湾
+      - 🇰🇷 韩国
+      - 🇭 Hysteria2
+      - 🇷 Reality
+      - 🌐 其他地区
+      - 🚀 手动切换
+
+  - name: "🅾︎ OneDrive"
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇸 美国
+      - 🇸🇬 新加坡
+      - 🇨🇳 台湾
+      - 🇰🇷 韩国
+      - 🇭 Hysteria2
+      - 🇷 Reality
+      - 🌐 其他地区
+      - 🚀 手动切换
+
+  - name: "Ⓜ️ 微软服务"
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇸 美国
+      - 🇸🇬 新加坡
+      - 🇨🇳 台湾
+      - 🇰🇷 韩国
+      - 🇭 Hysteria2
+      - 🇷 Reality
+      - 🌐 其他地区
+      - 🚀 手动切换
+
+  - name: "🥦 AI"
+    type: select
+    use:
+      - Paoluz
+    filter: "(B|D)"
+
+  - name: "🎯 全球直连"
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - 🇭 Hysteria2
+      - 🇷 Reality
+      - 🌐 其他地区
+      - 🚀 手动切换
 
   - name: "🐟 漏网之鱼"
     type: select
     proxies:
-      - 🇭🇰 香港(云洞)
-      - 🚀 节点选择
       - DIRECT
-      - ♻️ 自动选择
-      - 🇭🇰 香港(魅影)
+      - 🚀 节点选择
+      - 🇭🇰 香港
       - 🇯🇵 日本
       - 🇺🇸 美国
-      - 🎮 游戏专用
+      - 🇸🇬 新加坡
+      - 🇨🇳 台湾
+      - 🇰🇷 韩国
+      - 🇭 Hysteria2
+      - 🇷 Reality
+      - 🌐 其他地区
 
-  - name: 🇭🇰 香港(魅影)
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    use:
-      - 魅影
-    filter: '^(?=.*(?i)(HK|Hong Kong|香港|港))(?!.*(?i)(2x|4x)).*$'
-
-  - name: 🇭🇰 香港(云洞)
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    use:
-      - 云洞
-    filter: '(?i)(HK|Hong Kong|香港|港)'
-
-  - name: 🇹🇼 台湾
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    use:
-      - 魅影
-      - 云洞
-    filter: '(?i)(TW|Taiwan|台湾|台)'
-
-  - name: 🇸🇬 新加坡
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    use:
-      - 魅影
-      - 云洞
-    filter: '^(?=.*(?i)(SG|Singapore|新加坡|狮城|坡))(?!.*(?i)(2x|4x)).*$'
-
-  - name: 🇯🇵 日本
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    use:
-      - 魅影
-      - 云洞
-    filter: '^(?=.*(?i)(JP|Japan|日本|川日|东京|大阪|泉日|埼玉|沪日|深日))(?!.*(?i)(2x|4x)).*$'
-
-  - name: 🇺🇸 美国
-    type: url-test
-    url: 'https://www.gstatic.com/generate_204'
-    interval: 300
-    use:
-      - 魅影
-      - 云洞
-    filter: '^(?=.*(?i)(US|America|United States|美国|美))(?!.*(?i)(2x|4x)).*$'
-
-  - name: 🌐 其他地区
+  - name: "⚡ 专线"
     type: select
     use:
-      - 魅影
-      - 云洞
-    filter: '^(?!.*(?i)(HK|Hong Kong|香港|港|TW|Taiwan|台湾|台|SG|Singapore|新加坡|狮城|坡|JP|Japan|日本|US|America|United States|美国|美|流量|剩余|应急|官网|套餐)).*$'
+      - Paoluz
+    filter: "(IEPL|IPLC|BGP|专线|B|D1R)"
+
+  - name: "🇭🇰 香港"
+    type: select
+    use:
+      - Paoluz
+    filter: "(?i)(港|HK|Hong Kong|🇭🇰|HongKong)"
+
+  - name: "🇯🇵 日本"
+    type: select
+    use:
+      - Paoluz
+    filter: "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)"
+
+  - name: "🇺🇲 美国"
+    type: select
+    use:
+      - Paoluz
+    filter: "(?i)(美|US|United States|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥)"
+
+  - name: "🇸🇬 新加坡"
+    type: select
+    use:
+      - Paoluz
+    filter: "(?i)(新加坡|坡|狮城|SG|Singapore)"
+
+  - name: "🇨🇳 台湾"
+    type: select
+    use:
+      - Paoluz
+    filter: "(?i)(台|新北|彰化|TW|Taiwan)"
+
+  - name: "🇰🇷 韩国"
+    type: select
+    use:
+      - Paoluz
+    filter: "(?i)(KR|Korea|KOR|首尔|韩|韓)"
+
+  - name: "🇰🇷 韩国"
+    type: select
+    use:
+      - Paoluz
+    filter: "(?i)(KR|Korea|KOR|首尔|韩|韓)"
+
+  - name: "🇭 Hysteria2"
+    type: select
+    use:
+      - Paoluz
+    filter: "Y"
+
+  - name: "🇷 Reality"
+    type: select
+    use:
+      - Paoluz
+    filter: "V"
 
 rule-providers:
   Direct:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/rules/Direct.list'
+    url: 'https://raw.githubusercontent.com/lasthm/ImageHosting/refs/heads/self_clash/rules/Direct.list'
     path: ./ruleset/Direct.yaml
     interval: 86400
     format: text
@@ -175,25 +330,46 @@ rule-providers:
     path: ./ruleset/GameDownload.yaml
     interval: 86400
     format: text
-  US:
-    type: http
-    behavior: classical
-    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/rules/US.list'
-    path: ./ruleset/US.yaml
-    interval: 86400
-    format: text
   JP:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/refs/heads/main/rules/JP.list'
+    url: 'https://raw.githubusercontent.com/lasthm/ImageHosting/refs/heads/self_clash/rules/JP.list'
     path: ./ruleset/JP.yaml
+    interval: 86400
+    format: text
+  DMM:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Dmm.list'
+    path: ./ruleset/DMM.yaml
     interval: 86400
     format: text
   Rules:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/rules/Rules.list'
+    url: 'https://raw.githubusercontent.com/lasthm/ImageHosting/refs/heads/self_clash/rules/Rules.list'
     path: ./ruleset/Rules.yaml
+    interval: 86400
+    format: text
+  BW:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/lasthm/ImageHosting/refs/heads/self_clash/rules/BW.list'
+    path: ./ruleset/BW.yaml
+    interval: 86400
+    format: text
+  69:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/lasthm/ImageHosting/refs/heads/self_clash/rules/69.list'
+    path: ./ruleset/69.yaml
+    interval: 86400
+    format: text
+  EH:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/EHGallery.list'
+    path: ./ruleset/EH.yaml
     interval: 86400
     format: text
   GoogleFCM:
@@ -224,13 +400,6 @@ rule-providers:
     path: ./ruleset/OneDrive.yaml
     interval: 86400
     format: text
-  ChinaMerged:
-    type: http
-    behavior: classical
-    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/ChinaMerged.list'
-    path: ./ruleset/ChinaMerged.yaml
-    interval: 86400
-    format: text
   Microsoft:
     type: http
     behavior: classical
@@ -243,6 +412,13 @@ rule-providers:
     behavior: classical
     url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/AIMerged.list'
     path: ./ruleset/AIMerged.yaml
+    interval: 86400
+    format: text
+  AdBlockMerged:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/AdBlockMerged.list'
+    path: ./ruleset/AdBlockMerged.yaml
     interval: 86400
     format: text
   Apple:
@@ -259,13 +435,6 @@ rule-providers:
     path: ./ruleset/GameMerged.yaml
     interval: 86400
     format: text
-  AdBlockMerged:
-    type: http
-    behavior: classical
-    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/AdBlockMerged.list'
-    path: ./ruleset/AdBlockMerged.yaml
-    interval: 86400
-    format: text
   ProxyMediaMerged:
     type: http
     behavior: classical
@@ -278,6 +447,13 @@ rule-providers:
     behavior: classical
     url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list'
     path: ./ruleset/Bahamut.yaml
+    interval: 86400
+    format: text
+  Bilibili:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/master/Clash/Ruleset/Bilibili.list'
+    path: ./ruleset/Bilibili.yaml
     interval: 86400
     format: text
   ProxyGFWlist:
@@ -294,28 +470,38 @@ rule-providers:
     path: ./ruleset/Telegram.yaml
     interval: 86400
     format: text
+  ChinaMerged:
+    type: http
+    behavior: classical
+    url: 'https://raw.githubusercontent.com/mmm1h/clashconfig/main/ChinaMerged.list'
+    path: ./ruleset/ChinaMerged.yaml
+    interval: 86400
+    format: text
 
 rules:
   # --- 自定义规则 ---
-  - RULE-SET,US,🇺🇸 美国
-  - RULE-SET,JP,🇯🇵 日本
+  - RULE-SET,JP,🇯🇵 JP
+  - RULE-SET,DMM,🇯🇵 JP
   - RULE-SET,Rules,🚀 节点选择
+  - RULE-SET,BW,📙 BW
+  - RULE-SET,69,🕮 69
+  - RULE-SET,EH,🖼️ EH
   - RULE-SET,Direct,🎯 全球直连
-  - RULE-SET,GameDownload,🎯 全球直连
 
   # --- 直连规则 ---
-  - RULE-SET,Apple,🎯 全球直连
   - RULE-SET,GoogleFCM,🎯 全球直连
   - RULE-SET,GoogleCN,🎯 全球直连
   - RULE-SET,SteamCN,🎯 全球直连
-  - RULE-SET,OneDrive,🎯 全球直连
+  - RULE-SET,Apple,🎯 全球直连
   - RULE-SET,ChinaMerged,🎯 全球直连
   
   # --- 默认规则 ---
-  - RULE-SET,AIMerged,🤖 AI节点
-  - RULE-SET,GameMerged,🎮 游戏专用
-  - RULE-SET,ProxyMediaMerged,📺 国外媒体
+  - RULE-SET,OneDrive,🅾︎ OneDrive
   - RULE-SET,Microsoft,Ⓜ️ 微软服务
+  - RULE-SET,AIMerged,🥦 AI
+  - RULE-SET,GameMerged,🎮 游戏平台
+  - RULE-SET,GameDownload,⚽ 游戏下载
+  - RULE-SET,ProxyMediaMerged,🎥 海外媒体
   - RULE-SET,Bahamut,🇹🇼 台湾
   - RULE-SET,Telegram,🚀 节点选择
   - RULE-SET,ProxyGFWlist,🚀 节点选择
