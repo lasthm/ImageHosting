@@ -1,6 +1,7 @@
 proxy-providers:
   魅影:
     type: http
+<<<<<<< HEAD
     url: "__MEIYING_URL__"
     interval: 86400
     path: "./providers/魅影.yaml"
@@ -14,6 +15,11 @@ proxy-providers:
     url: "__YUNDONG_URL__"
     interval: 86400
     path: "./providers/云洞.yaml"
+=======
+    url: "-------"
+    interval: 1440
+    path: "./providers/Paoluz.yaml"
+>>>>>>> d35de99 (Update mihomo.yaml)
     health-check:
       enable: true
       interval: 300
