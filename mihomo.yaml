@@ -43,8 +43,8 @@ proxy-providers:
     path: "./providers/Paoluz.yaml"
     health-check:
       enable: true
-      interval: 300
-      url: https://www.gstatic.com/generate_204
+      interval: 3600
+      url: "-------"
 
 proxy-groups:
   - name: "🚀 节点选择"
@@ -340,7 +340,7 @@ rule-providers:
   DMM:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Dmm.list'
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/Dmm.list'
     path: ./ruleset/DMM.yaml
     interval: 86400
     format: text
@@ -375,35 +375,35 @@ rule-providers:
   GoogleFCM:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list'
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/GoogleFCM.list'
     path: ./ruleset/GoogleFCM.yaml
     interval: 86400
     format: text
   GoogleCN:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list'
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list'
     path: ./ruleset/GoogleCN.yaml
     interval: 86400
     format: text
   SteamCN:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list'
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list'
     path: ./ruleset/SteamCN.yaml
     interval: 86400
     format: text
   OneDrive:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OneDrive.list'
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/OneDrive.list'
     path: ./ruleset/OneDrive.yaml
     interval: 86400
     format: text
   Microsoft:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list'
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list'
     path: ./ruleset/Microsoft.yaml
     interval: 86400
     format: text
@@ -424,7 +424,7 @@ rule-providers:
   Apple:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list'
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list'
     path: ./ruleset/Apple.yaml
     interval: 86400
     format: text
@@ -445,28 +445,28 @@ rule-providers:
   Bahamut:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list'
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/Bahamut.list'
     path: ./ruleset/Bahamut.yaml
     interval: 86400
     format: text
   Bilibili:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/master/Clash/Ruleset/Bilibili.list'
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/Bilibili.list'
     path: ./ruleset/Bilibili.yaml
     interval: 86400
     format: text
   ProxyGFWlist:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list'
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyGFWlist.list'
     path: ./ruleset/ProxyGFWlist.yaml
     interval: 86400
     format: text
   Telegram:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list'
+    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list'
     path: ./ruleset/Telegram.yaml
     interval: 86400
     format: text
