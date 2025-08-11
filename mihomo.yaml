@@ -39,7 +39,7 @@ proxy-providers:
   Paoluz:
     type: http
     url: "-------"
-    interval: 1440
+    interval: 86400
     path: "./providers/Paoluz.yaml"
     health-check:
       enable: true
