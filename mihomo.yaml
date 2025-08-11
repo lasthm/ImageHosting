@@ -38,7 +38,7 @@ dns:
 proxy-providers:
   Paoluz:
     type: http
-    url: "https://appv2.nloli.xyz/tako_api/sub?token=SL1x1lGS2ZVLW378&addFlag=yes&subType=meta"
+    url: "-------"
     interval: 1440
     path: "./providers/Paoluz.yaml"
     health-check:
