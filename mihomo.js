@@ -1,3 +1,4 @@
+// https://mihomo.party/docs/guide/override/javascript
 function main(config) {
   // Ensure basic structure exists (though assignments below might overwrite)
   if (!config['proxy-groups']) {
@@ -331,7 +332,7 @@ function main(config) {
       name: "🌐 其他地区",
       type: "select",
       "include-all": true,
-      exclude-filter: "(?i)(港|HK|🇭🇰|日本|JP|美|US|新加坡|坡|SG|台|新北|彰化|TW|KR|Korea|KOR|首尔|韩|韓|Y|V|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥)"
+      filter: "^(?!.*(港|HK|🇭🇰|日本|JP|美|US|新加坡|坡|SG|台|新北|彰化|TW|KR|Korea|KOR|首尔|韩|韓|Y|V|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥)).*$"
     }
   ];
 
