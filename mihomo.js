@@ -16,47 +16,117 @@ function main(config) {
       name: "🚀 节点选择",
       type: "select",
       proxies: [
-        "♻️ 自动选择",
         "DIRECT",
+        "⚡ 专线",
         "🇭🇰 香港",
-        "🇨🇳 台湾",
-        "🇸🇬 新加",
         "🇯🇵 日本",
         "🇺🇲 美国",
-        "🍉 其他地区"
+        "🇸🇬 新加坡",
+        "🇨🇳 台湾",
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区",
+        "🚀 手动切换"
       ]
     },
     {
-      name: "♻️ 自动选择",
-      type: "url-test",
-      url: "http://www.gstatic.com/generate_204",
-      interval: 300,
-      tolerance: 50,
+      name: "🚀 手动切换",
+      type: "select",
       "include-all": true,
-      filter: "(?=.*(港|HK|Hong Kong|🇭🇰|HongKong))^((?!(2X|4X)).)*$"
-      // proxies: [] // Implies filtering from all available proxies
     },
     {
-      name: "🎥 油管奈飞",
+      name: "🇯🇵 JP",
       type: "select",
       proxies: [
-        "♻️ 自动选择",
-        "🚀 节点选择",
-        "🍉 其他地区",
-        "🇸🇬 新加",
-        "🇭🇰 香港",
-        "🇨🇳 台湾",
         "🇯🇵 日本",
-        "🇺🇲 美国"
+        "⚡ 专线",
+        "🇭 Hysteria2",
+        "🇷 Reality"
+      ],
+      "include-all": true,
+      filter: "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)"
+    },
+    {
+      name: "🖼️ EH",
+      type: "select",
+      proxies: [
+        "DIRECT"
+      ],
+      "include-all": true,
+    },
+    {
+      name: "🚫 广告屏蔽",
+      type: "select",
+      proxies: [
+        "REJECT",
+        "DIRECT",
+        "🚀 节点选择",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇲 美国",
+        "🇸🇬 新加坡",
+        "🇨🇳 台湾",
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区"
       ]
+    },
+    {
+      name: "📙 BW",
+      type: "select",
+      proxies: [
+        "DIRECT",
+        "⚡ 专线",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇲 美国",
+        "🇸🇬 新加坡",
+        "🇨🇳 台湾",
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区"
+      ]
+    },
+    {
+      name: "🕮 69",
+      type: "select",
+      proxies: [
+        "DIRECT"
+      ],
+      "include-all": true,
+    },
+    {
+      name: "🎥 海外媒体",
+      type: "select",
+      proxies: [
+        "DIRECT",
+        "⚡ 专线",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇲 美国",
+        "🇸🇬 新加坡",
+        "🇨🇳 台湾",
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区"
+      ],
+      "include-all": true,
+      filter: "宽频"
     },
     {
       name: "📺 哔哩哔哩",
       type: "select",
       proxies: [
-        "🎯 全球直连", // This group should exist or map to DIRECT
+        "DIRECT",
+        "🇭🇰 香港",
         "🇨🇳 台湾",
-        "🇭🇰 香港"
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区"
       ]
     },
     {
@@ -64,12 +134,17 @@ function main(config) {
       type: "select",
       proxies: [
         "DIRECT",
-        "🚀 节点选择",
-        "🇺🇲 美国",
+        "⚡ 专线",
         "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇲 美国",
+        "🇸🇬 新加坡",
         "🇨🇳 台湾",
-        "🇸🇬 新加",
-        "🇯🇵 日本"
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区",
+        "🚀 手动切换"
       ]
     },
     {
@@ -78,12 +153,17 @@ function main(config) {
       proxies: [
         "DIRECT",
         "🚀 节点选择",
-        "🍉 其他地区",
-        "🇺🇲 美国",
+        "⚡ 专线",
         "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇲 美国",
+        "🇸🇬 新加坡",
         "🇨🇳 台湾",
-        "🇸🇬 新加",
-        "🇯🇵 日本"
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区",
+        "🚀 手动切换"
       ]
     },
     {
@@ -92,7 +172,17 @@ function main(config) {
       proxies: [
         "DIRECT",
         "🚀 节点选择",
-        "🍉 其他地区"
+        "⚡ 专线",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇲 美国",
+        "🇸🇬 新加坡",
+        "🇨🇳 台湾",
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区",
+        "🚀 手动切换"
       ]
     },
     {
@@ -101,379 +191,333 @@ function main(config) {
       proxies: [
         "DIRECT",
         "🚀 节点选择",
-        "🍉 其他地区"
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇲 美国",
+        "🇸🇬 新加坡",
+        "🇨🇳 台湾",
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区",
+        "🚀 手动切换"
       ]
     },
     {
-      name: "🥦 OPENAI",
-      type: "url-test",
-      url: "https://api.openai.com/v1/completions",
-      interval: 300,
-      tolerance: 100,
+      name: "🅾︎ OneDrive",
+      type: "select",
+      proxies: [
+        "DIRECT",
+        "🚀 节点选择",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇲 美国",
+        "🇸🇬 新加坡",
+        "🇨🇳 台湾",
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区",
+        "🚀 手动切换"
+      ]
+    },
+    {
+      name: "🥦 AI",
+      type: "select",
+      proxies: [
+        "DIRECT",
+        "🚀 节点选择",
+        "⚡ 专线",
+        "🇭🇰 香港",
+        "🇯🇵 日本",
+        "🇺🇲 美国",
+        "🇸🇬 新加坡",
+        "🇨🇳 台湾",
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区",
+        "🚀 手动切换"
+      ],
       "include-all": true,
-      filter: "(?=.*(gpt|GPT))^((?!(4X)).)*$"
-      // proxies: [] // Implies filtering from all available proxies
+      filter: "(B|D)"
     },
     {
       name: "🎯 全球直连",
       type: "select",
       proxies: [
-        "DIRECT"
-        // "🚀 节点选择", // Optionally add other fallbacks if DIRECT is not primary
-        // "🍉 其他地区"
+        "DIRECT",
+        "🚀 节点选择",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区",
+        "🚀 手动切换"
       ]
     },
     {
-      name: "💩 ‍广告屏蔽",
-      type: "select",
-      proxies: [
-        "REJECT",
-        "DIRECT"
-        // "🚀 节点选择" // Optional
-      ]
-    },
-    {
-      name: "🐟 未知网站",
+      name: "🐟 漏网之鱼",
       type: "select",
       proxies: [
         "DIRECT",
-        "♻️ 自动选择",
         "🚀 节点选择",
-        "🍉 其他地区",
+        "⚡ 专线",
         "🇭🇰 香港",
-        "🇨🇳 台湾",
-        "🇸🇬 新加",
         "🇯🇵 日本",
-        "🇺🇲 美国"
+        "🇺🇲 美国",
+        "🇸🇬 新加坡",
+        "🇨🇳 台湾",
+        "🇰🇷 韩国",
+        "🇭 Hysteria2",
+        "🇷 Reality",
+        "🌐 其他地区",
+        "🚀 手动切换"
       ]
     },
     {
-      name: "🇭🇰 香港",
-      type: "select", // Per INI, this was a select group with a filter
+      name: "⚡ 专线",
+      type: "select",
       "include-all": true,
-      filter: "(?=.*(港|HK|Hong Kong|🇭🇰|HongKong))^((?!(2X|4X)).)*$"
-      // proxies: [] // populated by proxies matching the filter from all available
+      filter: "(IEPL|IPLC|BGP|专线|B|D1R)"
+    },
+    {
+      name: "🇭🇰 香港",
+      type: "select",
+      "include-all": true,
+      filter: "(?i)(港|HK|Hong Kong|🇭🇰|HongKong)"
     },
     {
       name: "🇯🇵 日本",
-      type: "url-test",
-      url: "http://www.gstatic.com/generate_204",
-      interval: 300,
-      tolerance: 50,
+      type: "select",
       "include-all": true,
-      filter: "(?=.*(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan))^((?!(2X|4X)).)*$"
-      // proxies: []
+      filter: "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)"
     },
     {
       name: "🇺🇲 美国",
-      type: "url-test",
-      url: "http://www.gstatic.com/generate_204",
-      interval: 300,
-      tolerance: 50,
+      type: "select",
       "include-all": true,
-      filter: "(?=.*(美|US|United States))^((?!(2X|4X)).)*$"
-      // proxies: []
+      filter: "(?i)(美|US|United States|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥)"
     },
     {
-      name: "🇸🇬 新加",
-      type: "url-test",
-      url: "http://www.gstatic.com/generate_204",
-      interval: 300,
-      tolerance: 50,
+      name: "🇸🇬 新加坡",
+      type: "select",
       "include-all": true,
-      filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(2X|4X)).)*$"
-      // proxies: []
+      filter: "(?i)(新加坡|坡|狮城|SG|Singapore)"
     },
     {
       name: "🇨🇳 台湾",
-      type: "url-test",
-      url: "http://www.gstatic.com/generate_204",
-      interval: 300,
-      tolerance: 50,
+      type: "select",
       "include-all": true,
-      filter: "(台|新北|彰化|TW|Taiwan)"
-      // proxies: []
+      filter: "(?i)(台|新北|彰化|TW|Taiwan)"
     },
     {
-      name: "🍉 其他地区",
-      type: "select", // Per INI, this was a select group with a filter
+      name: "🇰🇷 韩国",
+      type: "select",
       "include-all": true,
-      filter: "^(?!.*?(?:港|HK|🇭🇰|日本|JP|美|US|新加坡|坡|SG|台|新北|彰化|TW)).+$"
-      // proxies: [] // populated by proxies matching the filter from all available
+      filter: "(?i)(KR|Korea|KOR|首尔|韩|韓)"
+    },
+    {
+      name: "🇭 Hysteria2",
+      type: "select",
+      "include-all": true,
+      filter: "(?i)Y"
+    },
+    {
+      name: "🇷 Reality",
+      type: "select",
+      "include-all": true,
+      filter: "(?i)V"
+    },
+    {
+      name: "🌐 其他地区",
+      type: "select",
+      "include-all": true,
+      exclude-filter: "(?i)(港|HK|🇭🇰|日本|JP|美|US|新加坡|坡|SG|台|新北|彰化|TW|KR|Korea|KOR|首尔|韩|韓|Y|V|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥)"
     }
   ];
 
   // Populate rule-providers from the YAML configuration
   const myRuleProviders = {
-    "mmm1h_Direct": {
+    "Direct": {
       type: "http",
       behavior: "classical",
-      url: "https://raw.githubusercontent.com/mmm1h/clashconfig/main/rules/Direct.list",
-      path: "./ruleset/mmm1h_Direct.yaml", // Local cache path
+      url: "https://raw.githubusercontent.com/lasthm/ImageHosting/refs/heads/self_clash/rules/Direct.list",
+      path: "./ruleset/Direct.yaml",
       interval: 86400,
       format: "text"
     },
-    "mmm1h_GameDownload": {
+    "GameDownload": {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/mmm1h/clashconfig/main/rules/GameDownload.list",
-      path: "./ruleset/mmm1h_GameDownload.yaml",
+      path: "./ruleset/GameDownload.yaml",
       interval: 86400,
       format: "text"
     },
-    "mmm1h_US": {
+    "JP": {
       type: "http",
       behavior: "classical",
-      url: "https://raw.githubusercontent.com/mmm1h/clashconfig/main/rules/US.list",
-      path: "./ruleset/mmm1h_US.yaml",
+      url: "https://raw.githubusercontent.com/lasthm/ImageHosting/refs/heads/self_clash/rules/JP.list",
+      path: "./ruleset/JP.yaml",
       interval: 86400,
       format: "text"
     },
-    "mmm1h_JP": {
+    "DMM": {
       type: "http",
       behavior: "classical",
-      url: "https://raw.githubusercontent.com/mmm1h/clashconfig/refs/heads/main/rules/JP.list",
-      path: "./ruleset/mmm1h_JP.yaml",
+      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/Dmm.list",
+      path: "./ruleset/DMM.yaml",
       interval: 86400,
       format: "text"
     },
-    "mmm1h_Rules": {
+    "Rules": {
       type: "http",
       behavior: "classical",
-      url: "https://raw.githubusercontent.com/mmm1h/clashconfig/main/rules/Rules.list",
-      path: "./ruleset/mmm1h_Rules.yaml",
+      url: "https://raw.githubusercontent.com/lasthm/ImageHosting/refs/heads/self_clash/rules/Rules.list",
+      path: "./ruleset/Rules.yaml",
       interval: 86400,
       format: "text"
     },
-    "blackmatrix7_WeChat": {
+    "BW": {
       type: "http",
       behavior: "classical",
-      url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WeChat/WeChat.list",
-      path: "./ruleset/blackmatrix7_WeChat.yaml",
+      url: "https://raw.githubusercontent.com/lasthm/ImageHosting/refs/heads/self_clash/rules/BW.list",
+      path: "./ruleset/BW.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_UnBan": {
+    "69": {
       type: "http",
       behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list",
-      path: "./ruleset/ACL4SSR_UnBan.yaml",
+      url: "https://raw.githubusercontent.com/lasthm/ImageHosting/refs/heads/self_clash/rules/69.list",
+      path: "./ruleset/69.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_GoogleFCM": {
+    "EH": {
+      type: "http",
+      behavior: "classical",
+      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/EHGallery.list",
+      path: "./ruleset/EH.yaml",
+      interval: 86400,
+      format: "text"
+    },
+    "GoogleFCM": {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list",
-      path: "./ruleset/ACL4SSR_GoogleFCM.yaml",
+      path: "./ruleset/GoogleFCM.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_GoogleCN": {
+    "GoogleCN": {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list",
-      path: "./ruleset/ACL4SSR_GoogleCN.yaml",
+      path: "./ruleset/GoogleCN.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_SteamCN": {
+    "SteamCN": {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list",
-      path: "./ruleset/ACL4SSR_SteamCN.yaml",
+      path: "./ruleset/SteamCN.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_OneDrive": {
+    "OneDrive": {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OneDrive.list",
-      path: "./ruleset/ACL4SSR_OneDrive.yaml",
+      path: "./ruleset/OneDrive.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_ChinaMerged": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/mmm1h/clashconfig/main/ChinaMerged.list",
-      path: "./ruleset/ACL4SSR_ChinaMerged.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_Microsoft": {
+    "Microsoft": {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list",
-      path: "./ruleset/ACL4SSR_Microsoft.yaml",
+      path: "./ruleset/Microsoft.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_OpenAi": {
+    "AIMerged": {
       type: "http",
       behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list",
-      path: "./ruleset/ACL4SSR_OpenAi.yaml",
+      url: "https://raw.githubusercontent.com/mmm1h/clashconfig/main/AIMerged.list",
+      path: "./ruleset/AIMerged.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_AI": {
+    "AdBlockMerged": {
       type: "http",
       behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list",
-      path: "./ruleset/ACL4SSR_AI.yaml",
+      url: "https://raw.githubusercontent.com/mmm1h/clashconfig/main/AdBlockMerged.list",
+      path: "./ruleset/AdBlockMerged.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_BanAD": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
-      path: "./ruleset/ACL4SSR_BanAD.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_BanProgramAD": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
-      path: "./ruleset/ACL4SSR_BanProgramAD.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_BanEasyList": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyList.list",
-      path: "./ruleset/ACL4SSR_BanEasyList.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_BanEasyListChina": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list",
-      path: "./ruleset/ACL4SSR_BanEasyListChina.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_Apple": {
+    "Apple": {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list",
-      path: "./ruleset/ACL4SSR_Apple.yaml",
+      path: "./ruleset/Apple.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_Epic": {
+    "GameMerged": {
       type: "http",
       behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list",
-      path: "./ruleset/ACL4SSR_Epic.yaml",
+      url: "https://raw.githubusercontent.com/mmm1h/clashconfig/main/GameMerged.list",
+      path: "./ruleset/GameMerged.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_Origin": {
+    "ProxyMediaMerged": {
       type: "http",
       behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list",
-      path: "./ruleset/ACL4SSR_Origin.yaml",
+      url: "hhttps://raw.githubusercontent.com/mmm1h/clashconfig/main/ProxyMediaMerged.list",
+      path: "./ruleset/ProxyMediaMerged.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_Sony": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list",
-      path: "./ruleset/ACL4SSR_Sony.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_Steam": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list",
-      path: "./ruleset/ACL4SSR_Steam.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_Nintendo": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list",
-      path: "./ruleset/ACL4SSR_Nintendo.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_YouTube": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list",
-      path: "./ruleset/ACL4SSR_YouTube.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_Netflix": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list",
-      path: "./ruleset/ACL4SSR_Netflix.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_AmazonIp": {
-      type: "http",
-      behavior: "classical", // Or "ipcidr" if the list is purely IPs
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AmazonIp.list",
-      path: "./ruleset/ACL4SSR_AmazonIp.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_Bahamut": {
+    "Bahamut": {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list",
-      path: "./ruleset/ACL4SSR_Bahamut.yaml",
+      path: "./ruleset/Bahamut.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_BilibiliHMT": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/BilibiliHMT.list",
-      path: "./ruleset/ACL4SSR_BilibiliHMT.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_Bilibili": {
+    "Bilibili": {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bilibili.list",
-      path: "./ruleset/ACL4SSR_Bilibili.yaml",
+      path: "./ruleset/Bilibili.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_ProxyMedia": {
-      type: "http",
-      behavior: "classical",
-      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
-      path: "./ruleset/ACL4SSR_ProxyMedia.yaml",
-      interval: 86400,
-      format: "text"
-    },
-    "ACL4SSR_ProxyGFWlist": {
+    "ProxyGFWlist": {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
-      path: "./ruleset/ACL4SSR_ProxyGFWlist.yaml",
+      path: "./ruleset/ProxyGFWlist.yaml",
       interval: 86400,
       format: "text"
     },
-    "ACL4SSR_Telegram": {
+    "Telegram": {
       type: "http",
       behavior: "classical",
       url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
-      path: "./ruleset/ACL4SSR_Telegram.yaml",
+      path: "./ruleset/Telegram.yaml",
+      interval: 86400,
+      format: "text"
+    },
+    "ChinaMerged": {
+      type: "http",
+      behavior: "classical",
+      url: "https://raw.githubusercontent.com/mmm1h/clashconfig/main/ChinaMerged.list",
+      path: "./ruleset/ChinaMerged.yaml",
       interval: 86400,
       format: "text"
     }
@@ -483,50 +527,43 @@ function main(config) {
   // Populate rules from the YAML configuration
   config["rules"] = [
     // ;自定义规则
-    "RULE-SET,mmm1h_Direct,🎯 全球直连",
-    "RULE-SET,mmm1h_GameDownload,⚽ 游戏下载",
-    "RULE-SET,mmm1h_US,🇺🇲 美国",
-    "RULE-SET,mmm1h_JP,🇯🇵 日本",
-    "RULE-SET,mmm1h_Rules,🚀 节点选择",
+    "RULE-SET,JP,🇯🇵 JP",
+    "RULE-SET,DMM,🇯🇵 JP",
+    "RULE-SET,Rules,🚀 节点选择",
+    "RULE-SET,BW,📙 BW",
+    "RULE-SET,69,🕮 69",
+    "RULE-SET,EH,🖼️ EH",
+    "RULE-SET,Direct,🎯 全球直连",
 
-    // ;直连规则 & 分流规则 (Order from INI)
-    "RULE-SET,blackmatrix7_WeChat,🎯 全球直连",
-    "RULE-SET,ACL4SSR_UnBan,🎯 全球直连",
-    "RULE-SET,ACL4SSR_GoogleFCM,🎯 全球直连",
-    "RULE-SET,ACL4SSR_GoogleCN,🎯 全球直连",
-    "RULE-SET,ACL4SSR_SteamCN,🎯 全球直连",
-    "RULE-SET,ACL4SSR_OneDrive,🎯 全球直连",
-    "RULE-SET,ACL4SSR_Microsoft,Ⓜ️ 微软服务",
-    "RULE-SET,ACL4SSR_OpenAi,🥦 OPENAI",
-    "RULE-SET,ACL4SSR_AI,🥦 OPENAI",
-    "RULE-SET,ACL4SSR_BanAD,💩 ‍广告屏蔽",
-    "RULE-SET,ACL4SSR_BanProgramAD,💩 ‍广告屏蔽",
-    "RULE-SET,ACL4SSR_BanEasyList,💩 ‍广告屏蔽",
-    "RULE-SET,ACL4SSR_BanEasyListChina,💩 ‍广告屏蔽",
-    "RULE-SET,ACL4SSR_Apple,🍎 苹果服务",
-    "RULE-SET,ACL4SSR_Epic,🎮 游戏平台",
-    "RULE-SET,ACL4SSR_Origin,🎮 游戏平台",
-    "RULE-SET,ACL4SSR_Sony,🎮 游戏平台",
-    "RULE-SET,ACL4SSR_Steam,🎮 游戏平台",
-    "RULE-SET,ACL4SSR_Nintendo,🎮 游戏平台",
-    "RULE-SET,ACL4SSR_YouTube,🎥 油管奈飞",
-    "RULE-SET,ACL4SSR_Netflix,🎥 油管奈飞",
-    "RULE-SET,ACL4SSR_AmazonIp,🎥 油管奈飞",
-    "RULE-SET,ACL4SSR_Bahamut,🇨🇳 台湾",
-    "RULE-SET,ACL4SSR_BilibiliHMT,📺 哔哩哔哩",
-    "RULE-SET,ACL4SSR_Bilibili,📺 哔哩哔哩",
-    "RULE-SET,ACL4SSR_ProxyMedia,🚀 节点选择",
-    "RULE-SET,ACL4SSR_ProxyGFWlist,🚀 节点选择",
-    "RULE-SET,ACL4SSR_Telegram,🚀 节点选择",
+    // ;直连规则
+    "RULE-SET,GoogleFCM,🎯 全球直连",
+    "RULE-SET,GoogleCN,🎯 全球直连",
+    "RULE-SET,SteamCN,🎯 全球直连",
+
+    // ;默认规则
+    "RULE-SET,Microsoft,Ⓜ️ 微软服务",
+    "RULE-SET,OneDrive,🅾︎ OneDrive",
+    "RULE-SET,AIMerged,🥦 AI",
+    "RULE-SET,Apple,🍎 苹果服务",
+    "RULE-SET,GameMerged,🎮 游戏平台",
+    "RULE-SET,GameDownload,⚽ 游戏下载",
+    "RULE-SET,Bahamut,🇨🇳 台湾",
+    "RULE-SET,Bilibili,📺 哔哩哔哩",
+    "RULE-SET,ProxyMediaMerged,🎥 海外媒体",
+    "RULE-SET,Telegram,🚀 节点选择",
+    "RULE-SET,ProxyGFWlist,🚀 节点选择",
+
+    // ;广告屏蔽
+    "RULE-SET,AdBlockMerged,🚫 广告屏蔽",
 
     // ;中国大陆IP和域名直连
-    "RULE-SET,ACL4SSR_ChinaMerged,🎯 全球直连",
+    "RULE-SET,ChinaMerged,🎯 全球直连",
 
-    // ;局域网和中国大陆IP直连 (GEOIP,CN)
+    // ;GEOIP
     "GEOIP,CN,🎯 全球直连",
 
-    // ;未知网站 (兜底规则)
-    "MATCH,🐟 未知网站"
+    // ;兜底规则
+    "MATCH,🐟 漏网之鱼"
   ];
 
   return config;
