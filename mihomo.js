@@ -477,7 +477,7 @@ function main(config) {
     "ProxyMediaMerged": {
       type: "http",
       behavior: "classical",
-      url: "hhttps://raw.githubusercontent.com/mmm1h/clashconfig/main/ProxyMediaMerged.list",
+      url: "https://raw.githubusercontent.com/mmm1h/clashconfig/main/ProxyMediaMerged.list",
       path: "./ruleset/ProxyMediaMerged.yaml",
       interval: 86400,
       format: "text"
