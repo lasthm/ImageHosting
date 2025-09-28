@@ -38,13 +38,22 @@ dns:
 proxy-providers:
   Paoluz:
     type: http
-    url: "-------"
+    url: "------"
     interval: 86400
     path: "./providers/Paoluz.yaml"
     health-check:
       enable: true
-      interval: 3600
-      url: "-------"
+      interval: 86400
+      url: "------"
+  iKuuu:
+    type: http
+    url: "------"
+    interval: 86400
+    path: "./providers/iKuuu.yaml"
+    health-check:
+      enable: true
+      interval: 86400
+      url: "------"
 
 proxy-groups:
   - name: "🚀 节点选择"
@@ -131,22 +140,33 @@ proxy-groups:
       - Paoluz
     filter: "宽频"
     proxies:
+      - DIRECT
+      - ⚡ 专线
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇲 美国
+      - 🇸🇬 新加坡
       - 🇨🇳 台湾
+      - 🇰🇷 韩国
+      - 🇭 Hysteria2
+      - 🇷 Reality
+      - 🌐 其他地区
 
   - name: "📺 哔哩哔哩"
     type: select
     proxies:
       - 🎯 全球直连
-      - 🇨🇳 台湾
       - 🇭🇰 香港
+      - 🇨🇳 台湾
       - 🇭 Hysteria2
       - 🇷 Reality
+      - 🌐 其他地区
 
   - name: "🍎 苹果服务"
     type: select
     proxies:
       - DIRECT
-      - 🚀 节点选择
+      - ⚡ 专线
       - 🇭🇰 香港
       - 🇯🇵 日本
       - 🇺🇲 美国
@@ -192,7 +212,7 @@ proxy-groups:
       - 🌐 其他地区
       - 🚀 手动切换
 
-  - name: "🅾︎ OneDrive"
+  - name: "Ⓜ️ 微软服务"
     type: select
     proxies:
       - DIRECT
@@ -208,7 +228,7 @@ proxy-groups:
       - 🌐 其他地区
       - 🚀 手动切换
 
-  - name: "Ⓜ️ 微软服务"
+  - name: "🅾︎ OneDrive"
     type: select
     proxies:
       - DIRECT
@@ -229,6 +249,20 @@ proxy-groups:
     use:
       - Paoluz
     filter: "(B|D)"
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ⚡ 专线
+      - 🇭🇰 香港
+      - 🇯🇵 日本
+      - 🇺🇲 美国
+      - 🇸🇬 新加坡
+      - 🇨🇳 台湾
+      - 🇰🇷 韩国
+      - 🇭 Hysteria2
+      - 🇷 Reality
+      - 🌐 其他地区
+      - 🚀 手动切换
 
   - name: "🎯 全球直连"
     type: select
@@ -245,6 +279,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🚀 节点选择
+      - ⚡ 专线
       - 🇭🇰 香港
       - 🇯🇵 日本
       - 🇺🇲 美国
