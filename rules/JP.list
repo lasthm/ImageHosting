@@ -26,7 +26,6 @@ DOMAIN-SUFFIX,line-apps.com
 DOMAIN-SUFFIX,line.me
 DOMAIN-SUFFIX,kakaocdn.net
 PROCESS-NAME,jp.naver.linemanga.android
-PROCESS-NAME,DMMbookviewer.exe
 DOMAIN-SUFFIX,yahoo.co.jp
 DOMAIN-SUFFIX,minori.ph
 DOMAIN-SUFFIX,toranoana.jp
