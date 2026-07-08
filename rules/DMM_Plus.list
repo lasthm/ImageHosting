@@ -15,9 +15,9 @@ DOMAIN-SUFFIX,tenco.cc
 DOMAIN-SUFFIX,wheel-soft.com
 PROCESS-NAME,DMMbookviewer.exe
 
-#DOMAIN-SUFFIX,trepy.jp
-#DOMAIN-SUFFIX,point-news.jp
-#DOMAIN-SUFFIX,life-n.jp
-#DOMAIN-SUFFIX,news-fan.jp
-#DOMAIN-SUFFIX,ani-lab.jp
+DOMAIN-SUFFIX,trepy.jp
+DOMAIN-SUFFIX,point-news.jp
+DOMAIN-SUFFIX,life-n.jp
+DOMAIN-SUFFIX,news-fan.jp
+DOMAIN-SUFFIX,ani-lab.jp
 #DOMAIN-SUFFIX,kantangame.com
